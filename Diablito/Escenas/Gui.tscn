@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://dmrstgtra42hi"]
+
+[ext_resource type="Texture2D" uid="uid://bc7ibwkaej2vq" path="res://Recursos/Vida.png" id="1_e7q4a"]
+[ext_resource type="Texture2D" uid="uid://djy0v1rqksvrr" path="res://Recursos/Muertes.png" id="2_vdopm"]
+[ext_resource type="SystemFont" uid="uid://gthn7cfsgcff" path="res://Recursos/Fuente.tres" id="3_pys2l"]
+
+[sub_resource type="GDScript" id="GDScript_a5v60"]
+script/source = "extends CanvasLayer
+		
+func update_health():
+	$ProgressBar.value = Globals.health_player
+
+func update_murders():
+	$Label.text = str(Globals.dead_enemies)
+
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ronww"]
+bg_color = Color(0.133333, 0.133333, 0.133333, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.776471, 0.776471, 0.776471, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+shadow_color = Color(1, 1, 1, 0.6)
+shadow_size = 2
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q6ad7"]
+bg_color = Color(0.803922, 0, 0.133333, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+anti_aliasing = false
+
+[node name="GUI" type="CanvasLayer"]
+script = SubResource("GDScript_a5v60")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(150, 0)
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 210.0
+offset_bottom = 25.0
+theme_override_styles/background = SubResource("StyleBoxFlat_ronww")
+theme_override_styles/fill = SubResource("StyleBoxFlat_q6ad7")
+max_value = 5.0
+value = 5.0
+show_percentage = false
+
+[node name="Vida" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(20, 20)
+scale = Vector2(2, 2)
+texture = ExtResource("1_e7q4a")
+vframes = 6
+
+[node name="Asesinatos" type="Sprite2D" parent="."]
+position = Vector2(630, 20)
+scale = Vector2(2, 2)
+texture = ExtResource("2_vdopm")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 565.0
+offset_top = 12.0
+offset_right = 612.0
+offset_bottom = 35.0
+theme_override_fonts/font = ExtResource("3_pys2l")
+theme_override_font_sizes/font_size = 20
+text = "0"
+horizontal_alignment = 2

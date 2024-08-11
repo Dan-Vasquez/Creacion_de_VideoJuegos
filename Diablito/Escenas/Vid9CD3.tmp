@@ -1,0 +1,110 @@
+[gd_scene load_steps=9 format=3 uid="uid://de11sr43w0tdy"]
+
+[ext_resource type="Texture2D" uid="uid://cf27jbeg2swvy" path="res://Recursos/Botella_Rota.png" id="1_bid4f"]
+[ext_resource type="Texture2D" uid="uid://fteqi07ipri6" path="res://Recursos/Luz.png" id="2_pa0kf"]
+
+[sub_resource type="GDScript" id="GDScript_yx5pe"]
+script/source = "extends Area2D
+
+const SPEED = 100
+
+var follow_player = false
+var texture = load(\"res://Recursos/Atun.png\")
+
+const healing_sprites = []
+
+@onready var player = get_node(\"/root/Alcantarilla/Diablito\")
+
+func _ready():
+	$Sprite2D.texture = \"\"
+	
+func _process(delta):
+	
+	if follow_player:
+		position += global_position.direction_to(player.global_position) * SPEED * delta
+
+func _on_body_entered(_body):
+	follow_player = true
+	$AnimationPlayer.pause()
+
+
+func _on_colision_body_entered(body):
+	Globals.weapon_in_use = 1
+	Globals.visible_weapon = true
+	body.change_weapon()
+	queue_free()
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_10vas"]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3h48k"]
+radius = 38.0132
+
+[sub_resource type="Animation" id="Animation_uudyh"]
+resource_name = "Movimiento"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 5), Vector2(0, 0), Vector2(0, -5)]
+}
+
+[sub_resource type="Animation" id="Animation_2psaf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lv34p"]
+_data = {
+"Movimiento": SubResource("Animation_uudyh"),
+"RESET": SubResource("Animation_2psaf")
+}
+
+[node name="Arma_Item_1" type="Area2D"]
+script = SubResource("GDScript_yx5pe")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bid4f")
+
+[node name="PointLight2D" type="PointLight2D" parent="Sprite2D"]
+scale = Vector2(0.5, 0.5)
+shadow_enabled = true
+texture = ExtResource("2_pa0kf")
+
+[node name="Colision" type="Area2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Colision"]
+shape = SubResource("CircleShape2D_10vas")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3h48k")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite2D/Colision")
+libraries = {
+"": SubResource("AnimationLibrary_lv34p")
+}
+autoplay = "Movimiento"
+speed_scale = 0.8
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Sprite2D/Colision" to="." method="_on_colision_body_entered"]

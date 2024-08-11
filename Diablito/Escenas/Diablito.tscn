@@ -1,0 +1,226 @@
+[gd_scene load_steps=22 format=3 uid="uid://cbbh320ecsv6g"]
+
+[ext_resource type="Texture2D" uid="uid://cvury31uuutqo" path="res://Recursos/Diablito2.png" id="1_cfr6s"]
+[ext_resource type="Script" path="res://Codigos/Diablito.gd" id="1_cwow6"]
+[ext_resource type="Shader" uid="uid://bd1lbxov5se43" path="res://Recursos/Flash_herida.tres" id="1_r3kdh"]
+[ext_resource type="Texture2D" uid="uid://fteqi07ipri6" path="res://Recursos/Luz.png" id="2_73x80"]
+[ext_resource type="PackedScene" uid="uid://csctv2p7urcwo" path="res://Escenas/Arma_Blanca_1.tscn" id="2_gbcg6"]
+[ext_resource type="PackedScene" uid="uid://bbpweuqjgd5wd" path="res://Escenas/Arma_Fuego.tscn" id="3_h2i0u"]
+[ext_resource type="PackedScene" uid="uid://dmrstgtra42hi" path="res://Escenas/Gui.tscn" id="3_qyyyn"]
+[ext_resource type="PackedScene" uid="uid://bmsj8f2jw8i4n" path="res://Escenas/Arma_Blanca_2.tscn" id="6_vxg1o"]
+[ext_resource type="AudioStream" uid="uid://cg6ks8q6ymmv" path="res://Sonido/player-hurt-47810.mp3" id="8_vls2r"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_018aq"]
+polygon = PackedVector2Array(-3, 0, -1, 0, -1, -1, 1, -1, 1, 0, 3, 0, 3, -1, 4, -1, 4, -4, 5, -4, 5, -7, 4, -7, 4, -8, 3, -8, 3, -10, 4, -10, 4, -11, 5, -11, 5, -12, 6, -12, 6, -13, 5, -13, 5, -15, 4, -15, 4, -16, 3, -16, 3, -15, -2, -15, -2, -16, -3, -16, -3, -15, -4, -15, -4, -13, -5, -13, -5, -11, -7, -11, -7, -10, -8, -10, -8, -9, -7, -9, -7, -8, -8, -8, -8, -4, -7, -4, -7, -3, -6, -3, -6, -2, -4, -2, -4, -1, -3, -1)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_a30rb"]
+polygon = PackedVector2Array(-4, -16, -3, -16, -3, -15, 2, -15, 2, -16, 3, -16, 3, -15, 4, -15, 4, -13, 5, -13, 5, -11, 7, -11, 7, -10, 8, -10, 8, -9, 7, -9, 7, -8, 8, -8, 8, -6, 7, -6, 7, -6, 7, -6, 8, -6, 8, -4, 7, -4, 7, -3, 6, -3, 6, -2, 4, -2, 4, -1, 3, -1, 3, 0, 1, 0, 1, -1, -1, -1, -1, 0, -3, 0, -3, -1, -4, -1, -4, -4, -5, -4, -5, -7, -4, -7, -4, -8, -3, -8, -3, -10, -4, -10, -4, -11, -5, -11, -5, -12, -6, -12, -6, -13, -5, -13, -5, -15, -4, -15)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_foqpp"]
+shader = ExtResource("1_r3kdh")
+shader_parameter/activado = false
+shader_parameter/tinte = Color(1, 1, 1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rx7dj"]
+size = Vector2(10, 8)
+
+[sub_resource type="Animation" id="Animation_7njhn"]
+resource_name = "Movimiento"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.261799, 0.0, -0.261799]
+}
+
+[sub_resource type="Animation" id="Animation_h1jqe"]
+resource_name = "Parado"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -8), Vector2(0, -9)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_oc3p2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rxexy"]
+_data = {
+"Movimiento": SubResource("Animation_7njhn"),
+"Parado": SubResource("Animation_h1jqe"),
+"RESET": SubResource("Animation_oc3p2")
+}
+
+[sub_resource type="Animation" id="Animation_cqdys"]
+resource_name = "Flash_Herida"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/activado")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_nxjh1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/activado")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8m6u3"]
+_data = {
+"Flash_Herida": SubResource("Animation_cqdys"),
+"RESET": SubResource("Animation_nxjh1")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b0ogo"]
+size = Vector2(12, 10)
+
+[node name="Diablito" type="CharacterBody2D" groups=["player"]]
+collision_layer = 25
+script = ExtResource("1_cwow6")
+
+[node name="GUI" parent="." instance=ExtResource("3_qyyyn")]
+
+[node name="OccluderDerecho" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_018aq")
+
+[node name="OccluderIzquierdo" type="LightOccluder2D" parent="."]
+visible = false
+occluder = SubResource("OccluderPolygon2D_a30rb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_foqpp")
+texture = ExtResource("1_cfr6s")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -6)
+shadow_enabled = true
+shadow_item_cull_mask = 2
+texture = ExtResource("2_73x80")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_rx7dj")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rxexy")
+}
+speed_scale = 0.6
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite2D")
+libraries = {
+"": SubResource("AnimationLibrary_8m6u3")
+}
+
+[node name="Arma_Fuego" parent="." instance=ExtResource("3_h2i0u")]
+process_mode = 4
+visible = false
+position = Vector2(0, -7)
+
+[node name="Arma_Blanca" parent="." instance=ExtResource("2_gbcg6")]
+process_mode = 4
+visible = false
+position = Vector2(0, -6)
+
+[node name="Arma_Blanca2" parent="." instance=ExtResource("6_vxg1o")]
+process_mode = 4
+visible = false
+position = Vector2(0, -7)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_b0ogo")
+
+[node name="Herida" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_vls2r")
+volume_db = -5.0
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_heridas_body_entered"]

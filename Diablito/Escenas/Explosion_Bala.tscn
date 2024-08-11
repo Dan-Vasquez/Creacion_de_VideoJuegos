@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4whni1j8grl1"]
+
+[sub_resource type="Gradient" id="Gradient_tsm7i"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GDScript" id="GDScript_4cr8x"]
+script/source = "extends CPUParticles2D
+
+func _on_finished():
+	queue_free()
+"
+
+[node name="CPUParticles2D" type="CPUParticles2D"]
+position = Vector2(0, 1)
+emitting = false
+amount = 20
+lifetime = 0.4
+one_shot = true
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 100)
+initial_velocity_max = 50.51
+scale_amount_min = 0.5
+color_ramp = SubResource("Gradient_tsm7i")
+script = SubResource("GDScript_4cr8x")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

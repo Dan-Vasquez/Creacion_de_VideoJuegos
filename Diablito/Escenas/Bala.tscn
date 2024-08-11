@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://s3t0px6yhsi2"]
+
+[ext_resource type="Texture2D" uid="uid://cocpq1h78wef8" path="res://Recursos/Bala_Oxidada.png" id="1_44bft"]
+[ext_resource type="Script" path="res://Codigos/Bala.gd" id="1_x4ecm"]
+[ext_resource type="Texture2D" uid="uid://fteqi07ipri6" path="res://Recursos/Luz.png" id="2_ucrpt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p64vt"]
+radius = 4.0
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xku2q"]
+polygon = PackedVector2Array(-3, -3, 2, -3, 4, -1, 4, 1, 2, 3, -3, 3, -4, 2, -4, -2)
+
+[node name="Bala" type="Area2D"]
+top_level = true
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_x4ecm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_44bft")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_p64vt")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(0.2, 0.2)
+shadow_enabled = true
+shadow_item_cull_mask = 2
+texture = ExtResource("2_ucrpt")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_xku2q")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
