@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://gkikemvtgk4c"]
+
+[ext_resource type="PackedScene" uid="uid://cqpfh1kdnqu1a" path="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0/gltf/axeDouble_uncommon.gltf.glb" id="1_4jahy"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gktqs"]
+points = PackedVector3Array(0.366061, 0.652585, -0.00111905, -0.379989, 0.389994, -0.00111905, 0.034659, -0.192503, -0.0615965, 0.0195944, -0.177343, 0.0744734, -0.0407424, 0.41226, -0.0918441, -0.237445, 0.608953, 0.0593584, -0.328225, 0.760262, -0.016234, 0.231283, 0.608953, 0.0593584, 0.352271, 0.261235, 0.0139959, 0.322063, 0.608953, -0.0464638, -0.328225, 0.41226, -0.0464638, 0.049802, 0.427514, 0.089606, -0.0558855, -0.192503, -0.0464638, 0.322063, 0.760262, -0.016234, -0.34329, 0.246076, 0.0139959, 0.337128, 0.442579, -0.0464638, 0.322063, 0.382131, 0.0442257, -0.34329, 0.548505, 0.0442257, -0.0407424, -0.192503, 0.0593584, -0.297861, 0.654336, -0.0464638, 0.0649451, -0.192503, 0.0291108, 0.034659, 0.41226, -0.0918441, -0.0407424, 0.41226, 0.089606, -0.0407424, -0.177343, -0.0615965, 0.30692, 0.654336, 0.0442257, 0.0283549, 0.528132, -0.0766893, -0.358433, 0.291365, -0.016234, 0.337128, 0.246076, -0.016234, -0.00988147, 0.566052, 0.081654, -0.0105348, -0.177343, 0.0744734, 0.291777, 0.654336, -0.0464638, 0.380005, 0.608756, -0.00111905)
+
+[node name="axeDouble_uncommon_gltf" instance=ExtResource("1_4jahy")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="axeDouble_uncommon" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00154138, -0.0495249, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="axeDouble_uncommon/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00154138, 0.0495249, 0)
+shape = SubResource("ConvexPolygonShape3D_gktqs")

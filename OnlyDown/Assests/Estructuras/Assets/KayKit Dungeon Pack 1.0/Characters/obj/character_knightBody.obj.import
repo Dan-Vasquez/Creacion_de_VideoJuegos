@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ccugi86eml0wd"
+path="res://.godot/imported/character_knightBody.obj-650ac2444d25cbc8c38be9f2e38ece3d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/character_knightBody.obj-650ac2444d25cbc8c38be9f2e38ece3d.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0/Characters/obj/character_knightBody.obj"
+dest_files=["res://.godot/imported/character_knightBody.obj-650ac2444d25cbc8c38be9f2e38ece3d.mesh", "res://.godot/imported/character_knightBody.obj-650ac2444d25cbc8c38be9f2e38ece3d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

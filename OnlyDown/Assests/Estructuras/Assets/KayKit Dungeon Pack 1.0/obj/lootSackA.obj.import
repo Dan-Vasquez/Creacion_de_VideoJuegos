@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://6xelbkf18fpp"
+path="res://.godot/imported/lootSackA.obj-4eeccadc024e418362e0f86b295e901a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lootSackA.obj-4eeccadc024e418362e0f86b295e901a.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0/obj/lootSackA.obj"
+dest_files=["res://.godot/imported/lootSackA.obj-4eeccadc024e418362e0f86b295e901a.mesh", "res://.godot/imported/lootSackA.obj-4eeccadc024e418362e0f86b295e901a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

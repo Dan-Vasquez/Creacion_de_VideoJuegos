@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh7wvalggmcph"]
+
+[ext_resource type="PackedScene" uid="uid://51sqrcvfmo1n" path="res://Assets/KayKit Dungeon Pack 1.0 RE/gltf/coin.gltf.glb" id="1_8p2qv"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6mwph"]
+points = PackedVector3Array(0.00289944, -7.15256e-07, -0.180028, 0.00240608, -0.0625037, -0.150003, -0.125233, -7.15256e-07, -0.129388, 0.00240608, 0.0625023, -0.150003, 0.12934, -7.15256e-07, -0.125265, 0.10802, -0.0625037, -0.104121, -0.104336, -0.0625037, -0.107786, -0.149972, -0.0625037, -0.0024533, -0.179996, -7.15256e-07, -0.00294666, -0.149972, 0.0625023, -0.0024533, -0.104336, 0.0625023, -0.107786, 0.107738, 0.0625023, -0.104367, 0.149956, 0.0625023, 0.00237457, 0.180016, -7.15256e-07, 0.00286794, 0.149956, -0.0625037, 0.00276221, -0.107754, -0.0625037, 0.104289, -0.129356, -7.15256e-07, 0.125186, -0.107754, 0.0625023, 0.104289, 0.10432, 0.0625023, 0.107707, 0.125217, -7.15256e-07, 0.129309, 0.104073, -0.0625037, 0.107989, -0.00280944, -0.0625037, 0.149924, -0.00291516, -7.15256e-07, 0.179984, -0.0024218, 0.0625023, 0.149924)
+
+[node name="coin_gltf" instance=ExtResource("1_8p2qv")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="coin" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="coin/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_6mwph")

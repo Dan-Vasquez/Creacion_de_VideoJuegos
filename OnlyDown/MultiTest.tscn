@@ -1,0 +1,104 @@
+[gd_scene load_steps=8 format=3 uid="uid://btabng6uqfsjf"]
+
+[ext_resource type="PackedScene" uid="uid://pntk3bdjtswk" path="res://Escenas/Personajes/jugador.tscn" id="1_e2xuw"]
+
+[sub_resource type="GDScript" id="GDScript_nr4h5"]
+script/source = "extends Node3D
+
+var peer = ENetMultiplayerPeer.new()
+@export var player_scene: PackedScene
+
+func _on_host_pressed():
+	peer.create_server(1027)
+	multiplayer.multiplayer_peer = peer
+	multiplayer.peer_connected.connect(add_player)
+	add_player()
+	$CanvasLayer.hide()
+
+func _on_join_pressed():
+	peer.create_client(\"127.0.0.1\", 1027)
+	multiplayer.multiplayer_peer = peer
+	$CanvasLayer.hide()
+
+func add_player(id = 1):
+	var player = player_scene.instantiate()
+	player.name = str(id)
+	call_deferred(\"add_child\", player)
+
+func exit_game(id):
+	multiplayer.peer_disconnected.connect(del_player)
+	del_player(id)
+
+func del_player(id):
+	rpc(\"_del_player\", id)
+	
+@rpc(\"any_peer\",\"call_local\")
+func _del_player(id):
+	get_node(str(id)).queue_free()
+	
+	
+	
+	
+	
+	
+	
+"
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_th1qi"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_scyof"]
+sky_material = SubResource("ProceduralSkyMaterial_th1qi")
+
+[sub_resource type="Environment" id="Environment_jks5e"]
+background_mode = 2
+sky = SubResource("Sky_scyof")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_fm4ja"]
+size = Vector3(100, 1, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rltcj"]
+size = Vector3(100, 1, 100)
+
+[node name="Node3D" type="Node3D"]
+script = SubResource("GDScript_nr4h5")
+player_scene = ExtResource("1_e2xuw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jks5e")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_fm4ja")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_rltcj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Host" type="Button" parent="CanvasLayer"]
+offset_right = 238.0
+offset_bottom = 108.0
+text = "Host"
+
+[node name="Join" type="Button" parent="CanvasLayer"]
+offset_left = -2.0
+offset_top = 133.0
+offset_right = 238.0
+offset_bottom = 291.0
+text = "Join"
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://Escenas/Personajes/jugador.tscn")
+spawn_path = NodePath("..")
+
+[connection signal="pressed" from="CanvasLayer/Host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="CanvasLayer/Join" to="." method="_on_join_pressed"]

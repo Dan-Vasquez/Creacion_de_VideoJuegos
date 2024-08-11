@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://utttl5byq4xt"
+path="res://.godot/imported/wallSingle_split.obj-b36bcf1f20402cf24d73b4193f12e1e7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wallSingle_split.obj-b36bcf1f20402cf24d73b4193f12e1e7.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0/obj/wallSingle_split.obj"
+dest_files=["res://.godot/imported/wallSingle_split.obj-b36bcf1f20402cf24d73b4193f12e1e7.mesh", "res://.godot/imported/wallSingle_split.obj-b36bcf1f20402cf24d73b4193f12e1e7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

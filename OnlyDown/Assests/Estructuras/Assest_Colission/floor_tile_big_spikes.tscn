@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://crsxckjaqjjdo"]
+
+[ext_resource type="PackedScene" uid="uid://cvvrjwhkbw4n" path="res://Assets/KayKit Dungeon Pack 1.0 RE/gltf/floor_tile_big_spikes.glb" id="1_1vuel"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rwsub"]
+points = PackedVector3Array(-2, -0.1, -2, -2, -0.1, 2, -2, 0.0499836, -2, 2, -0.1, -2, -2, 0.0499836, 2, 2, -0.1, 2, -1.19029, 0.100004, -1.06695, -1.06695, 0.100004, -1.19029, 2, 0.0499836, -2, -1.06695, 0.100004, 1.1899, -1.19029, 0.100004, 1.06656, 2, 0.0499836, 2, 1.06617, 0.100004, -1.19029, 1.1899, 0.100004, -1.06695, 1.06617, 0.100004, 1.1899, 1.1899, 0.100004, 1.06656)
+
+[node name="floor_tile_big_spikes" instance=ExtResource("1_1vuel")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor_tile_big_spikes2" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor_tile_big_spikes2/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_rwsub")

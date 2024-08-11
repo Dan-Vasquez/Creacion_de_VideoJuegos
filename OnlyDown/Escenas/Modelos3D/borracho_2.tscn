@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6oqeqpsv4xb2"]
+
+[ext_resource type="PackedScene" uid="uid://dbcwt3od1ppwq" path="res://Assests/Modelos3D/Borracho2/Borracho2.glb" id="1_pedv3"]
+
+[node name="Borracho2" instance=ExtResource("1_pedv3")]

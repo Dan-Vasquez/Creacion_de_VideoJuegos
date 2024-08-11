@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c6bltr44cdm6o"
+path="res://.godot/imported/coin.obj-c63f62bdebbe5e0e513b7c220750071e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/coin.obj-c63f62bdebbe5e0e513b7c220750071e.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0 RE/obj/coin.obj"
+dest_files=["res://.godot/imported/coin.obj-c63f62bdebbe5e0e513b7c220750071e.mesh", "res://.godot/imported/coin.obj-c63f62bdebbe5e0e513b7c220750071e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

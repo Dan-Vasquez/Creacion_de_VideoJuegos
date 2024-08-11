@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl5vwwye6jwq5"]
+
+[ext_resource type="PackedScene" uid="uid://blna1pj84thu7" path="res://Assets/KayKit Dungeon Pack 1.0/gltf/scaffold_high.gltf.glb" id="1_215q7"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jnyc8"]
+points = PackedVector3Array(-2, 1.59971, -1.70008, -1.90016, 0, -1.90016, -2, 1.59971, 1.69969, -2, 3.99967, -2, -1.70008, 1.79997, -2, 1.89977, 0, -1.90016, -1.90016, 0, 1.89977, -2, 3.99967, 1.99961, -2, 4.1, -2, 1.69969, 1.79997, -2, 1.99961, 1.59971, -1.70008, 2, 1.59971, 1.59984, 1.89977, 0, 1.89977, 2, 3.99967, -2, -1.60024, 1.79997, 2, -1.70008, 1.79997, 1.99961, -2, 4.1, 1.99961, 2, 4.1, -2, 1.99961, 1.59971, 1.69969, 2, 1.8999, 1.59984, 1.99961, 3.99967, 1.99961, 1.69969, 1.79997, 2, -1.60024, 2.09977, 2, 1.99961, 4.1, 1.99961, -1.30031, 3.99967, 2, 2, 4.1, -1.30031, 1.69969, 2.09977, 2, 1.29992, 3.99967, 2)
+
+[node name="scaffold_high_gltf" instance=ExtResource("1_215q7")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="scaffold_high" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="scaffold_high/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_jnyc8")

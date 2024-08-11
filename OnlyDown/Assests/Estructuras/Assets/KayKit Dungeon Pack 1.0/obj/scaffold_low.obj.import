@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://3t7csep50dvf"
+path="res://.godot/imported/scaffold_low.obj-43a2e08a5148886540761ed6f00308ae.mesh"
+
+[deps]
+
+files=["res://.godot/imported/scaffold_low.obj-43a2e08a5148886540761ed6f00308ae.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0/obj/scaffold_low.obj"
+dest_files=["res://.godot/imported/scaffold_low.obj-43a2e08a5148886540761ed6f00308ae.mesh", "res://.godot/imported/scaffold_low.obj-43a2e08a5148886540761ed6f00308ae.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

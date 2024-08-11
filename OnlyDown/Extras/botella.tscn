@@ -1,0 +1,170 @@
+[gd_scene load_steps=21 format=3 uid="uid://cb7g85c1no7mw"]
+
+[ext_resource type="Script" path="res://Extras/botella.gd" id="1_bwugd"]
+[ext_resource type="Texture2D" uid="uid://c0wyv0iym2iv5" path="res://Assests/Menus/pexels-photo-12345329.jpg" id="1_c3wfd"]
+[ext_resource type="Texture2D" uid="uid://pavrgb76y5r" path="res://Assests/Menus/free-photo-of-textura-fondo-de-pantalla-papel-cafe-cartulina.jpg" id="3_whcac"]
+[ext_resource type="AudioStream" uid="uid://bacfh52x7i3ef" path="res://Assests/Sonido/collect-points-190037.mp3" id="4_kp25j"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_l5oq0"]
+height = 4.0
+radius = 0.8
+
+[sub_resource type="MultiMesh" id="MultiMesh_1gmac"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2874l"]
+transparency = 1
+albedo_color = Color(0.113725, 0, 0.188235, 0.941176)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_xci4f"]
+material = SubResource("StandardMaterial3D_2874l")
+bottom_radius = 0.55
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iixj8"]
+albedo_color = Color(0.894118, 0.85098, 1, 1)
+albedo_texture = ExtResource("1_c3wfd")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_crn1a"]
+material = SubResource("StandardMaterial3D_iixj8")
+top_radius = 0.54
+bottom_radius = 0.54
+height = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2astr"]
+material = SubResource("StandardMaterial3D_2874l")
+top_radius = 0.25
+height = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fole3"]
+transparency = 1
+albedo_color = Color(0.113725, 0, 0.188235, 0.941176)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_jvsjb"]
+material = SubResource("StandardMaterial3D_fole3")
+top_radius = 0.25
+bottom_radius = 0.25
+height = 0.7
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_tomtb"]
+material = SubResource("StandardMaterial3D_fole3")
+top_radius = 0.28
+bottom_radius = 0.28
+height = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_48kjf"]
+albedo_color = Color(0.976471, 0.658824, 0, 1)
+albedo_texture = ExtResource("3_whcac")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_p54dn"]
+material = SubResource("StandardMaterial3D_48kjf")
+top_radius = 0.23
+bottom_radius = 0.23
+height = 0.5
+
+[sub_resource type="Animation" id="Animation_kvet0"]
+resource_name = "Movimiento"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MultiMeshInstance3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1, 0), Vector3(0, 0, 0), Vector3(0, -1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pkxn2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MultiMeshInstance3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nckv6"]
+_data = {
+"Movimiento": SubResource("Animation_kvet0"),
+"RESET": SubResource("Animation_pkxn2")
+}
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_dr65r"]
+height = 5.0
+radius = 1.5
+
+[node name="Botella" type="StaticBody3D"]
+script = ExtResource("1_bwugd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.59218, 0)
+shape = SubResource("CylinderShape3D_l5oq0")
+disabled = true
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+multimesh = SubResource("MultiMesh_1gmac")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MultiMeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05853, 0)
+mesh = SubResource("CylinderMesh_xci4f")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MultiMeshInstance3D"]
+transform = Transform3D(0.0357311, -0.0177665, -0.999204, 0.000634918, 0.999842, -0.0177552, 0.999361, 0, 0.0357368, 0, 1.14489, 0)
+mesh = SubResource("CylinderMesh_crn1a")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="MultiMeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.15806, 0)
+mesh = SubResource("CylinderMesh_2astr")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="MultiMeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.59971, 0)
+mesh = SubResource("CylinderMesh_jvsjb")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="MultiMeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.89724, 0)
+mesh = SubResource("CylinderMesh_tomtb")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="MultiMeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.88174, 0)
+mesh = SubResource("CylinderMesh_p54dn")
+skeleton = NodePath("../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nckv6")
+}
+autoplay = "Movimiento"
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.59218, 0)
+shape = SubResource("CylinderShape3D_dr65r")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+light_color = Color(1, 0.756863, 0.180392, 1)
+light_energy = 2.0
+omni_range = 3.0
+
+[node name="Coin" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_kp25j")
+volume_db = -3.0
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="finished" from="Coin" to="." method="_on_coin_finished"]

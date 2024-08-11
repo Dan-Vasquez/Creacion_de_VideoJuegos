@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dm4i4keho6q5g"
+path="res://.godot/imported/wallSingle_windowGate.obj-e3e2f16296dfa594e8fafa3edb667250.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wallSingle_windowGate.obj-e3e2f16296dfa594e8fafa3edb667250.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0/obj/wallSingle_windowGate.obj"
+dest_files=["res://.godot/imported/wallSingle_windowGate.obj-e3e2f16296dfa594e8fafa3edb667250.mesh", "res://.godot/imported/wallSingle_windowGate.obj-e3e2f16296dfa594e8fafa3edb667250.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

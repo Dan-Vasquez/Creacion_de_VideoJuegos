@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0aheuj5lvblh"]
+
+[ext_resource type="PackedScene" uid="uid://d4nguqm27b462" path="res://Assets/KayKit Dungeon Pack 1.0 RE/gltf/wall_window_closed_scaffold.gltf.glb" id="1_jodb0"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3dmdj"]
+points = PackedVector3Array(2, 4, 0.5, 2, 0, 0.5, 2, 4, -0.5, -2, 4, 0.5, 2, 0, -0.5, -2, 0, 0.5, -2, 4, -0.5, -2, 0, -0.5)
+
+[node name="wall_window_closed_scaffold_gltf" instance=ExtResource("1_jodb0")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall_window_closed_scaffold" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall_window_closed_scaffold/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_3dmdj")

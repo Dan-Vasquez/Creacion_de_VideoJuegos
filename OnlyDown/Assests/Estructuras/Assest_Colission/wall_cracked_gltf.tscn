@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh13arlqov6g4"]
+
+[ext_resource type="PackedScene" uid="uid://btvd8geip0ahy" path="res://Assets/KayKit Dungeon Pack 1.0 RE/gltf/wall_cracked.gltf.glb" id="1_34suo"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_36dnv"]
+points = PackedVector3Array(2, 4, 0.499885, 1.59475, 0.293657, 0.624517, 1.63273, 0.308144, 0.6186, 1.7964, 0.412686, 0.589383, 2, 0, 0.499885, 2, 4, -0.500008, -2, 4, 0.499885, -1.40094, 0.372357, 0.629695, 1.59475, 0.268598, 0.614285, -1.58614, 0.309319, 0.617491, -2, 0, 0.499885, 2, 0, -0.500008, 1.62647, 0.303837, -0.614285, 1.58575, 0.309319, -0.617614, 1.40055, 0.372357, -0.629695, -2, 4, -0.500008, -1.62686, 0.303837, 0.614162, -2, 0, -0.500008, -1.59514, 0.268598, -0.614409, -1.59514, 0.293657, -0.624641, -1.63312, 0.308144, -0.618723, -1.79679, 0.412686, -0.589507)
+
+[node name="wall_cracked_gltf" instance=ExtResource("1_34suo")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall_cracked" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall_cracked/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_36dnv")

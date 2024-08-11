@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dr3p8bbvd3umi"]
+
+[ext_resource type="PackedScene" uid="uid://yasfwq3nysyc" path="res://Assets/KayKit Dungeon Pack 1.0 RE/gltf/barrier.gltf.glb" id="1_jr0av"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_o8w1e"]
+points = PackedVector3Array(2, 1.1, 0.1875, 2, 1.07491, 0.25, 2, 1.1, -0.1875, -2, 1.1, 0.1875, 2, 0, 0.25, -2, 1.07491, 0.25, 2, 1.07491, -0.25, -2, 1.1, -0.1875, 2, 0, -0.25, -2, 0, 0.25, -2, 1.07491, -0.25, -2, 0, -0.25)
+
+[node name="barrier_gltf" instance=ExtResource("1_jr0av")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="barrier" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="barrier/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_o8w1e")

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c6l6anoirrptd"
+path="res://.godot/imported/rubble_half.obj-cfff21804557196057fe3be0669f1ca8.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rubble_half.obj-cfff21804557196057fe3be0669f1ca8.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0 RE/obj/rubble_half.obj"
+dest_files=["res://.godot/imported/rubble_half.obj-cfff21804557196057fe3be0669f1ca8.mesh", "res://.godot/imported/rubble_half.obj-cfff21804557196057fe3be0669f1ca8.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

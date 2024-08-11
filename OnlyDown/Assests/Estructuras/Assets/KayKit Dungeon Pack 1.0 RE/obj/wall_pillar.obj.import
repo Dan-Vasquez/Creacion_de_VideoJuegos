@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ddbkjbmv4jk4v"
+path="res://.godot/imported/wall_pillar.obj-fdccee0ae613bb706e279d2befc48a28.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall_pillar.obj-fdccee0ae613bb706e279d2befc48a28.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0 RE/obj/wall_pillar.obj"
+dest_files=["res://.godot/imported/wall_pillar.obj-fdccee0ae613bb706e279d2befc48a28.mesh", "res://.godot/imported/wall_pillar.obj-fdccee0ae613bb706e279d2befc48a28.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

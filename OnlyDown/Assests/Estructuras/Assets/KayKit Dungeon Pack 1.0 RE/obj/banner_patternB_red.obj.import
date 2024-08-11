@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ba3w4oklepwm1"
+path="res://.godot/imported/banner_patternB_red.obj-a7055459751fa759df262cc0594c101b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/banner_patternB_red.obj-a7055459751fa759df262cc0594c101b.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0 RE/obj/banner_patternB_red.obj"
+dest_files=["res://.godot/imported/banner_patternB_red.obj-a7055459751fa759df262cc0594c101b.mesh", "res://.godot/imported/banner_patternB_red.obj-a7055459751fa759df262cc0594c101b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

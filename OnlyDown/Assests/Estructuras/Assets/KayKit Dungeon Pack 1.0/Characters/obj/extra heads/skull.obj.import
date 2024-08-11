@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b4n1xu5mrjryi"
+path="res://.godot/imported/skull.obj-457d426e435e1e6dcb04ca2f89dd9364.mesh"
+
+[deps]
+
+files=["res://.godot/imported/skull.obj-457d426e435e1e6dcb04ca2f89dd9364.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0/Characters/obj/extra heads/skull.obj"
+dest_files=["res://.godot/imported/skull.obj-457d426e435e1e6dcb04ca2f89dd9364.mesh", "res://.godot/imported/skull.obj-457d426e435e1e6dcb04ca2f89dd9364.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

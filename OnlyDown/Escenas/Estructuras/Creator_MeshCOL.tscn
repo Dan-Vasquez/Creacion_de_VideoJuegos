@@ -1,0 +1,344 @@
+[gd_scene load_steps=86 format=3 uid="uid://c6fj3ay1eijyf"]
+
+[ext_resource type="PackedScene" uid="uid://b031bnpgmbht6" path="res://Assests/Estructuras/Assest_Colission/barrel_large_decorated_gltf.tscn" id="1_k8s8m"]
+[ext_resource type="PackedScene" uid="uid://gbtd00f828yy" path="res://Assests/Estructuras/Assest_Colission/barrel_large_gltf.tscn" id="2_ou7v0"]
+[ext_resource type="PackedScene" uid="uid://oy735xsithj8" path="res://Assests/Estructuras/Assest_Colission/barrel_small_gltf.tscn" id="3_5k8k2"]
+[ext_resource type="PackedScene" uid="uid://dbwxpupkknjbj" path="res://Assests/Estructuras/Assest_Colission/barrel_small_stack_gltf.tscn" id="4_1lret"]
+[ext_resource type="PackedScene" uid="uid://loo18hbw1scj" path="res://Assests/Estructuras/Assest_Colission/barrier_column_gltf.tscn" id="5_tejtb"]
+[ext_resource type="PackedScene" uid="uid://cic353y5f1yfp" path="res://Assests/Estructuras/Assest_Colission/barrier_colum_half_gltf.tscn" id="6_qil80"]
+[ext_resource type="PackedScene" uid="uid://bcpyh6losj2y6" path="res://Assests/Estructuras/Assest_Colission/barrier_corner_gltf.tscn" id="7_2pgys"]
+[ext_resource type="PackedScene" uid="uid://dr3p8bbvd3umi" path="res://Assests/Estructuras/Assest_Colission/barrier_gltf.tscn" id="8_30h0w"]
+[ext_resource type="PackedScene" uid="uid://c8ey3pswq3wwp" path="res://Assests/Estructuras/Assest_Colission/barrier_half_gltf.tscn" id="9_qwdqq"]
+[ext_resource type="PackedScene" uid="uid://7r0856o1vq28" path="res://Assests/Estructuras/Assest_Colission/bed_decorated_gltf.tscn" id="10_bfceg"]
+[ext_resource type="PackedScene" uid="uid://dfrjm0hyeawki" path="res://Assests/Estructuras/Assest_Colission/bookcase_wide_filled_gltf.tscn" id="11_foboy"]
+[ext_resource type="PackedScene" uid="uid://b755a1582rvhp" path="res://Assests/Estructuras/Assest_Colission/box_small_decorated_gltf.tscn" id="12_ar56o"]
+[ext_resource type="PackedScene" uid="uid://ck80nesvlo26u" path="res://Assests/Estructuras/Assest_Colission/box_small_gltf.tscn" id="13_ev0o7"]
+[ext_resource type="PackedScene" uid="uid://coxxqr3yue11v" path="res://Assests/Estructuras/Assest_Colission/chair_gltf.tscn" id="14_qiswa"]
+[ext_resource type="PackedScene" uid="uid://b2q1yykbmcpjx" path="res://Assests/Estructuras/Assest_Colission/chest_uncommon_gltf.tscn" id="15_a3b42"]
+[ext_resource type="PackedScene" uid="uid://dh7wvalggmcph" path="res://Assests/Estructuras/Assest_Colission/coin_gltf.tscn" id="16_ny5as"]
+[ext_resource type="PackedScene" uid="uid://cjjvyn2tfh0vj" path="res://Assests/Estructuras/Assest_Colission/coin_stack_large_gltf.tscn" id="17_7ejty"]
+[ext_resource type="PackedScene" uid="uid://4f65ufsmduy" path="res://Assests/Estructuras/Assest_Colission/coin_stack_medium_gltf.tscn" id="18_txmg1"]
+[ext_resource type="PackedScene" uid="uid://d3nu6cdshjyba" path="res://Assests/Estructuras/Assest_Colission/coin_stack_small_gltf.tscn" id="19_jguyg"]
+[ext_resource type="PackedScene" uid="uid://dhri00lfvqbig" path="res://Assests/Estructuras/Assest_Colission/crate_platform_large_gltf.tscn" id="20_50a1k"]
+[ext_resource type="PackedScene" uid="uid://cuxljk4v54dec" path="res://Assests/Estructuras/Assest_Colission/crate_platform_medium_gltf.tscn" id="21_mfsbd"]
+[ext_resource type="PackedScene" uid="uid://by4piset7j7sh" path="res://Assests/Estructuras/Assest_Colission/crate_platform_small_gltf.tscn" id="22_lyf2l"]
+[ext_resource type="PackedScene" uid="uid://bgxghfy4c3kjy" path="res://Assests/Estructuras/Assest_Colission/floor_foundation_allsides_gltf.tscn" id="23_ydm78"]
+[ext_resource type="PackedScene" uid="uid://dwemn6xq4ovm1" path="res://Assests/Estructuras/Assest_Colission/floor_foundation_corner_gltf.tscn" id="24_r8aw5"]
+[ext_resource type="PackedScene" uid="uid://berd051op2da1" path="res://Assests/Estructuras/Assest_Colission/floor_foundation_diagonal_corner_gltf.tscn" id="25_xh5nn"]
+[ext_resource type="PackedScene" uid="uid://t3knq51xcbpx" path="res://Assests/Estructuras/Assest_Colission/floor_foundation_front_and_back_gltf.tscn" id="26_3tdgf"]
+[ext_resource type="PackedScene" uid="uid://dfadrcyg7bae8" path="res://Assests/Estructuras/Assest_Colission/floor_foundation_front_gltf.tscn" id="27_25bqw"]
+[ext_resource type="PackedScene" uid="uid://crsxckjaqjjdo" path="res://Assests/Estructuras/Assest_Colission/floor_tile_big_spikes.tscn" id="28_1mn1q"]
+[ext_resource type="PackedScene" uid="uid://dcgwj86e5hog8" path="res://Assests/Estructuras/Assest_Colission/floor_tile_extralarge_grates_gltf.tscn" id="29_17d1m"]
+[ext_resource type="PackedScene" uid="uid://br060aeh0x44x" path="res://Assests/Estructuras/Assest_Colission/floor_tile_grate_gltf.tscn" id="30_dmbma"]
+[ext_resource type="PackedScene" uid="uid://dy1arhe8dhred" path="res://Assests/Estructuras/Assest_Colission/floor_wood_small_dark_gltf.tscn" id="31_w3xr5"]
+[ext_resource type="PackedScene" uid="uid://cd703ffd4ylsc" path="res://Assests/Estructuras/Assest_Colission/floor_wood_small_gltf.tscn" id="32_5sp1h"]
+[ext_resource type="PackedScene" uid="uid://bv8fwt8p0e3yf" path="res://Assests/Estructuras/Assest_Colission/keg_decorated_gltf.tscn" id="33_mdegj"]
+[ext_resource type="PackedScene" uid="uid://dumtrv13x2m5b" path="res://Assests/Estructuras/Assest_Colission/keg_gltf.tscn" id="34_t8oly"]
+[ext_resource type="PackedScene" uid="uid://cddqb6q28e1ae" path="res://Assests/Estructuras/Assest_Colission/pillar_broken_gltf.tscn" id="35_ljqvu"]
+[ext_resource type="PackedScene" uid="uid://dyi6be7c830xa" path="res://Assests/Estructuras/Assest_Colission/pillar_decorated_gltf.tscn" id="36_tw7he"]
+[ext_resource type="PackedScene" uid="uid://cvk1py4cvy3lx" path="res://Assests/Estructuras/Assest_Colission/pillar_gltf.tscn" id="37_ec8s1"]
+[ext_resource type="PackedScene" uid="uid://cyh5j3sbchg7q" path="res://Assests/Estructuras/Assest_Colission/rubble_half_gltf.tscn" id="38_qnckk"]
+[ext_resource type="PackedScene" uid="uid://b05cui6kgd41h" path="res://Assests/Estructuras/Assest_Colission/rubble_large_gltf.tscn" id="39_ughua"]
+[ext_resource type="PackedScene" uid="uid://beccdfktti2yv" path="res://Assests/Estructuras/Assest_Colission/scaffold_high_corner_both_gltf.tscn" id="40_e3ntu"]
+[ext_resource type="PackedScene" uid="uid://dffwrwx7dbou3" path="res://Assests/Estructuras/Assest_Colission/scaffold_high_corner_left_gltf.tscn" id="41_x17km"]
+[ext_resource type="PackedScene" uid="uid://dl5vwwye6jwq5" path="res://Assests/Estructuras/Assest_Colission/scaffold_high_gltf.tscn" id="42_yrtby"]
+[ext_resource type="PackedScene" uid="uid://dkacxoeaaurmv" path="res://Assests/Estructuras/Assest_Colission/scaffold_high_railing_gltf.tscn" id="43_xfouv"]
+[ext_resource type="PackedScene" uid="uid://dqvolb31csgxt" path="res://Assests/Estructuras/Assest_Colission/scaffold_medium_gltf.tscn" id="44_rcj1k"]
+[ext_resource type="PackedScene" uid="uid://dm6pjko7bgd47" path="res://Assests/Estructuras/Assest_Colission/scaffold_medium_railing_gltf.tscn" id="45_2b7pm"]
+[ext_resource type="PackedScene" uid="uid://cdglvonp7wx6h" path="res://Assests/Estructuras/Assest_Colission/scaffold_stairs_gltf.tscn" id="46_oe18p"]
+[ext_resource type="PackedScene" uid="uid://dyaci7o2sqsdu" path="res://Assests/Estructuras/Assest_Colission/shelves_gltf.tscn" id="47_3qaw8"]
+[ext_resource type="PackedScene" uid="uid://dsp3kgpwanb7e" path="res://Assests/Estructuras/Assest_Colission/stairs_gltf2.tscn" id="48_3x3bb"]
+[ext_resource type="PackedScene" uid="uid://bnjw3q6ot057g" path="res://Assests/Estructuras/Assest_Colission/stairs_gltf.tscn" id="49_1x3dc"]
+[ext_resource type="PackedScene" uid="uid://cvi2kdivxaaji" path="res://Assests/Estructuras/Assest_Colission/stairs_walled_gltf.tscn" id="50_6i80v"]
+[ext_resource type="PackedScene" uid="uid://bbbhaxsbwc7dp" path="res://Assests/Estructuras/Assest_Colission/stairs_wide_gltf.tscn" id="51_usjmc"]
+[ext_resource type="PackedScene" uid="uid://ca7uh30ik2kjy" path="res://Assests/Estructuras/Assest_Colission/stairs_wood_decorated_gltf.tscn" id="52_nmimm"]
+[ext_resource type="PackedScene" uid="uid://d1ccttad718jo" path="res://Assests/Estructuras/Assest_Colission/stairs_wood_gltf.tscn" id="53_a6l78"]
+[ext_resource type="PackedScene" uid="uid://bli0p3roa17gs" path="res://Assests/Estructuras/Assest_Colission/table_long_broken_gltf.tscn" id="54_tg0kt"]
+[ext_resource type="PackedScene" uid="uid://smrxshk6fw5v" path="res://Assests/Estructuras/Assest_Colission/table_long_decorated_c_gltf.tscn" id="55_o8ctn"]
+[ext_resource type="PackedScene" uid="uid://boyjesdewf05u" path="res://Assests/Estructuras/Assest_Colission/table_long_gltf.tscn" id="56_eg2nf"]
+[ext_resource type="PackedScene" uid="uid://qx33qmlfca0s" path="res://Assests/Estructuras/Assest_Colission/tile_brick_a_large_gltf.tscn" id="57_yjqtn"]
+[ext_resource type="PackedScene" uid="uid://hb58jr4qr5o6" path="res://Assests/Estructuras/Assest_Colission/tile_brick_a_medium_gltf.tscn" id="58_cifo4"]
+[ext_resource type="PackedScene" uid="uid://bfthf0a5n5a7d" path="res://Assests/Estructuras/Assest_Colission/tile_brick_a_small_gltf.tscn" id="59_no2da"]
+[ext_resource type="PackedScene" uid="uid://q5jj70sghcoo" path="res://Assests/Estructuras/Assest_Colission/tile_brick_b_large_cracked_a_gltf.tscn" id="60_yk26f"]
+[ext_resource type="PackedScene" uid="uid://dn7qcr0yrp1yk" path="res://Assests/Estructuras/Assest_Colission/tile_brick_b_large_gltf.tscn" id="61_w62cj"]
+[ext_resource type="PackedScene" uid="uid://dv456r386j2pc" path="res://Assests/Estructuras/Assest_Colission/wall_archedwindow_gated_gltf.tscn" id="62_xp1au"]
+[ext_resource type="PackedScene" uid="uid://38queg5eyr4n" path="res://Assests/Estructuras/Assest_Colission/wall_archedwindow_gated_scaffold_gltf.tscn" id="63_hujsb"]
+[ext_resource type="PackedScene" uid="uid://dj8rp7osiw3d0" path="res://Assests/Estructuras/Assest_Colission/wall_archedwindow_open_gltf.tscn" id="64_3c0yj"]
+[ext_resource type="PackedScene" uid="uid://c3suido2wdcl2" path="res://Assests/Estructuras/Assest_Colission/wall_arched_gltf.tscn" id="65_hxm4d"]
+[ext_resource type="PackedScene" uid="uid://lsr5ik4uimt7" path="res://Assests/Estructuras/Assest_Colission/wall_broken_gltf.tscn" id="66_n12px"]
+[ext_resource type="PackedScene" uid="uid://bxrtme1j8uvj1" path="res://Assests/Estructuras/Assest_Colission/wall_corner_gltf.tscn" id="67_hhulm"]
+[ext_resource type="PackedScene" uid="uid://dkuh5r15vmeey" path="res://Assests/Estructuras/Assest_Colission/wall_corner_small_gltf.tscn" id="68_wjc0v"]
+[ext_resource type="PackedScene" uid="uid://bh13arlqov6g4" path="res://Assests/Estructuras/Assest_Colission/wall_cracked_gltf.tscn" id="69_xb3m7"]
+[ext_resource type="PackedScene" uid="uid://btgqc5au48iru" path="res://Assests/Estructuras/Assest_Colission/wall_crossing_gltf.tscn" id="70_sq52p"]
+[ext_resource type="PackedScene" uid="uid://nspbtw3b2efm" path="res://Assests/Estructuras/Assest_Colission/wall_doorway_sides_gltf.tscn" id="71_nvomg"]
+[ext_resource type="PackedScene" uid="uid://diqsl08c4qa7y" path="res://Assests/Estructuras/Assest_Colission/wall_doorway_tsplit_gltf.tscn" id="72_cpa5t"]
+[ext_resource type="PackedScene" uid="uid://ckmxvutvyqgvm" path="res://Assests/Estructuras/Assest_Colission/wall_gated_gltf.tscn" id="73_5fot4"]
+[ext_resource type="PackedScene" uid="uid://bj4spxqwj3fdi" path="res://Assests/Estructuras/Assest_Colission/wall_gltf.tscn" id="74_k2of6"]
+[ext_resource type="PackedScene" uid="uid://c65q7068j7m6y" path="res://Assests/Estructuras/Assest_Colission/wall_half_endcap_sloped_gltf.tscn" id="75_5j0kx"]
+[ext_resource type="PackedScene" uid="uid://cbl5r8adxb2k7" path="res://Assests/Estructuras/Assest_Colission/wall_half_gltf.tscn" id="76_j0no1"]
+[ext_resource type="PackedScene" uid="uid://bo3cnm5sqi3ah" path="res://Assests/Estructuras/Assest_Colission/wall_open_scaffold_gltf.tscn" id="77_yuicy"]
+[ext_resource type="PackedScene" uid="uid://ddrv1sjaom4cj" path="res://Assests/Estructuras/Assest_Colission/wall_pillar_gltf.tscn" id="78_1hmnw"]
+[ext_resource type="PackedScene" uid="uid://dy1jm2bq37ri4" path="res://Assests/Estructuras/Assest_Colission/wall_shelves_gltf.tscn" id="79_8rp6u"]
+[ext_resource type="PackedScene" uid="uid://b10be4ipcgf16" path="res://Assests/Estructuras/Assest_Colission/wall_sloped_gltf.tscn" id="80_0x736"]
+[ext_resource type="PackedScene" uid="uid://benk27jsb8q02" path="res://Assests/Estructuras/Assest_Colission/wall_tsplit_gltf.tscn" id="81_rm5w6"]
+[ext_resource type="PackedScene" uid="uid://ky3tdqlee4v2" path="res://Assests/Estructuras/Assest_Colission/wall_tsplit_sloped_gltf.tscn" id="82_i6he7"]
+[ext_resource type="PackedScene" uid="uid://dunh5h3muxns5" path="res://Assests/Estructuras/Assest_Colission/wall_window_closed_gltf.tscn" id="83_425pf"]
+[ext_resource type="PackedScene" uid="uid://c0aheuj5lvblh" path="res://Assests/Estructuras/Assest_Colission/wall_window_closed_scaffold_gltf.tscn" id="84_ucm5u"]
+[ext_resource type="PackedScene" uid="uid://s5ge4ongs5nk" path="res://Assests/Estructuras/Assest_Colission/wall_window_open_scaffold_gltf.tscn" id="85_af581"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="barrel_large_decorated_gltf" parent="." instance=ExtResource("1_k8s8m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="barrel_large_gltf" parent="." instance=ExtResource("2_ou7v0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="barrel_small_gltf" parent="." instance=ExtResource("3_5k8k2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="barrel_small_stack_gltf" parent="." instance=ExtResource("4_1lret")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="barrier_column_gltf" parent="." instance=ExtResource("5_tejtb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="barrier_colum_half_gltf" parent="." instance=ExtResource("6_qil80")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="barrier_corner_gltf" parent="." instance=ExtResource("7_2pgys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="barrier_gltf" parent="." instance=ExtResource("8_30h0w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="barrier_half_gltf" parent="." instance=ExtResource("9_qwdqq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="bed_decorated_gltf" parent="." instance=ExtResource("10_bfceg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="bookcaseWideFilled_gltf" parent="." instance=ExtResource("11_foboy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="box_small_decorated_gltf" parent="." instance=ExtResource("12_ar56o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="box_small_gltf" parent="." instance=ExtResource("13_ev0o7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="chair_gltf" parent="." instance=ExtResource("14_qiswa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="chest_uncommon_gltf" parent="." instance=ExtResource("15_a3b42")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="coin_gltf" parent="." instance=ExtResource("16_ny5as")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="coin_stack_large_gltf" parent="." instance=ExtResource("17_7ejty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="coin_stack_medium_gltf" parent="." instance=ExtResource("18_txmg1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="coin_stack_small_gltf" parent="." instance=ExtResource("19_jguyg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="cratePlatform_large_gltf" parent="." instance=ExtResource("20_50a1k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="cratePlatform_medium_gltf" parent="." instance=ExtResource("21_mfsbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="cratePlatform_small_gltf" parent="." instance=ExtResource("22_lyf2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="floor_foundation_allsides_gltf" parent="." instance=ExtResource("23_ydm78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="floor_foundation_corner_gltf" parent="." instance=ExtResource("24_r8aw5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="floor_foundation_diagonal_corner_gltf" parent="." instance=ExtResource("25_xh5nn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="floor_foundation_front_and_back_gltf" parent="." instance=ExtResource("26_3tdgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="floor_foundation_front_gltf" parent="." instance=ExtResource("27_25bqw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="floor_tile_big_spikes" parent="." instance=ExtResource("28_1mn1q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="floor_tile_extralarge_grates_gltf" parent="." instance=ExtResource("29_17d1m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="floor_tile_grate_gltf" parent="." instance=ExtResource("30_dmbma")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="floor_wood_small_dark_gltf" parent="." instance=ExtResource("31_w3xr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="floor_wood_small_gltf" parent="." instance=ExtResource("32_5sp1h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="keg_decorated_gltf" parent="." instance=ExtResource("33_mdegj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="keg_gltf" parent="." instance=ExtResource("34_t8oly")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="pillar_broken_gltf" parent="." instance=ExtResource("35_ljqvu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="pillar_decorated_gltf" parent="." instance=ExtResource("36_tw7he")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="pillar_gltf" parent="." instance=ExtResource("37_ec8s1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="rubble_half_gltf" parent="." instance=ExtResource("38_qnckk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="rubble_large_gltf" parent="." instance=ExtResource("39_ughua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="scaffold_high_cornerBoth_gltf" parent="." instance=ExtResource("40_e3ntu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="scaffold_high_cornerLeft_gltf" parent="." instance=ExtResource("41_x17km")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="scaffold_high_gltf" parent="." instance=ExtResource("42_yrtby")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="scaffold_high_railing_gltf" parent="." instance=ExtResource("43_xfouv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="scaffold_medium_gltf" parent="." instance=ExtResource("44_rcj1k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="scaffold_medium_railing_gltf" parent="." instance=ExtResource("45_2b7pm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="scaffold_stairs_gltf" parent="." instance=ExtResource("46_oe18p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="shelves_gltf" parent="." instance=ExtResource("47_3qaw8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="stairs_gltf" parent="." instance=ExtResource("48_3x3bb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="stairs_gltf2" parent="." instance=ExtResource("49_1x3dc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="stairs_walled_gltf" parent="." instance=ExtResource("50_6i80v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="stairs_wide_gltf" parent="." instance=ExtResource("51_usjmc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="stairs_wood_decorated_gltf" parent="." instance=ExtResource("52_nmimm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="stairs_wood_gltf" parent="." instance=ExtResource("53_a6l78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="table_long_broken_gltf" parent="." instance=ExtResource("54_tg0kt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="table_long_decorated_C_gltf" parent="." instance=ExtResource("55_o8ctn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="table_long_gltf" parent="." instance=ExtResource("56_eg2nf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="tileBrickA_large_gltf" parent="." instance=ExtResource("57_yjqtn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="tileBrickA_medium_gltf" parent="." instance=ExtResource("58_cifo4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="tileBrickA_small_gltf" parent="." instance=ExtResource("59_no2da")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="tileBrickB_largeCrackedA_gltf" parent="." instance=ExtResource("60_yk26f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="tileBrickB_large_gltf" parent="." instance=ExtResource("61_w62cj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_archedwindow_gated_gltf" parent="." instance=ExtResource("62_xp1au")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_archedwindow_gated_scaffold_gltf" parent="." instance=ExtResource("63_hujsb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_archedwindow_open_gltf" parent="." instance=ExtResource("64_3c0yj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_arched_gltf" parent="." instance=ExtResource("65_hxm4d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_broken_gltf" parent="." instance=ExtResource("66_n12px")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wallCorner_gltf" parent="." instance=ExtResource("67_hhulm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_corner_small_gltf" parent="." instance=ExtResource("68_wjc0v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_cracked_gltf" parent="." instance=ExtResource("69_xb3m7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_crossing_gltf" parent="." instance=ExtResource("70_sq52p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_doorway_sides_gltf" parent="." instance=ExtResource("71_nvomg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_doorway_Tsplit_gltf" parent="." instance=ExtResource("72_cpa5t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_gated_gltf" parent="." instance=ExtResource("73_5fot4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_gltf" parent="." instance=ExtResource("74_k2of6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_half_endcap_sloped_gltf" parent="." instance=ExtResource("75_5j0kx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_half_gltf" parent="." instance=ExtResource("76_j0no1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_open_scaffold_gltf" parent="." instance=ExtResource("77_yuicy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_pillar_gltf" parent="." instance=ExtResource("78_1hmnw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_shelves_gltf" parent="." instance=ExtResource("79_8rp6u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_sloped_gltf" parent="." instance=ExtResource("80_0x736")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_Tsplit_gltf" parent="." instance=ExtResource("81_rm5w6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_Tsplit_sloped_gltf" parent="." instance=ExtResource("82_i6he7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_window_closed_gltf" parent="." instance=ExtResource("83_425pf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_window_closed_scaffold_gltf" parent="." instance=ExtResource("84_ucm5u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)
+
+[node name="wall_window_open_scaffold_gltf" parent="." instance=ExtResource("85_af581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33136, 0, -0.116952)

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmgw03y2s3bgn"]
+
+[ext_resource type="PackedScene" uid="uid://b175expmo0oia" path="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0/gltf/torchWall.gltf.glb" id="1_fhhlx"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_evqfd"]
+points = PackedVector3Array(-0.33424, 0.838987, 0.583496, 0.0373486, 0.812871, 0.957038, 0.213097, -0.57904, -0.18774, 0.188176, 0.590232, -0.18774, -0.209767, -0.57904, -0.162787, 0.0389143, -0.404631, 0.359611, -0.209767, 0.565294, -0.18774, -0.06044, 1.01324, 0.359611, -0.33424, 0.838987, 0.707915, 0.337503, 0.913644, 0.583496, -0.06044, -0.280254, 0.409287, 0.337503, 0.838987, 0.707915, -0.06044, 0.838987, 0.98159, -0.33424, 0.938582, 0.608334, 0.213097, 0.565294, -0.18774, 0.0637693, 0.988302, 0.309935, 0.0637693, 0.764329, 0.956638, 0.262807, 0.963364, 0.608334, -0.06044, 0.789267, 0.98159, 0.188176, -0.479288, -0.0135306, -0.06044, 0.888707, 0.906848, -0.184847, 0.590232, -0.18774, 0.163321, 0.689672, 0.832219, -0.06044, 1.01324, 0.43424, -0.184847, -0.454507, 0.0113074, -0.184847, 0.689672, 0.807381, 0.188176, -0.57904, -0.137949, 0.0637693, -0.354911, 0.359611, -0.110216, -0.0562808, 0.483916, -0.259543, 0.963364, 0.608334, 0.0389143, 0.789267, 0.98159, -0.06044, 0.988302, 0.309935)
+
+[node name="torchWall_gltf" instance=ExtResource("1_fhhlx")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="torchWall" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="torchWall/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_evqfd")

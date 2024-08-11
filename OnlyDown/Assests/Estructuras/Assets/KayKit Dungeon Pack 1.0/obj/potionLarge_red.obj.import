@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bex3u111jssi0"
+path="res://.godot/imported/potionLarge_red.obj-0171c0c5a69b0e54e5fa9a974c221147.mesh"
+
+[deps]
+
+files=["res://.godot/imported/potionLarge_red.obj-0171c0c5a69b0e54e5fa9a974c221147.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0/obj/potionLarge_red.obj"
+dest_files=["res://.godot/imported/potionLarge_red.obj-0171c0c5a69b0e54e5fa9a974c221147.mesh", "res://.godot/imported/potionLarge_red.obj-0171c0c5a69b0e54e5fa9a974c221147.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

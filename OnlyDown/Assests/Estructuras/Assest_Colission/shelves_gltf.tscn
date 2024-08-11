@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyaci7o2sqsdu"]
+
+[ext_resource type="PackedScene" uid="uid://dkhgowrrc5hvn" path="res://Assets/KayKit Dungeon Pack 1.0 RE/gltf/shelves.gltf.glb" id="1_rdh6l"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_iewoe"]
+points = PackedVector3Array(1, 2.7, 0.72499, 1, 2.67499, 0.75, 1, 2.7, 0.25, -1, 2.7, 0.72499, 1, 1.02486, 0.75, -1, 2.67499, 0.75, 1, 0.999858, 0.25, -1, 2.7, 0.25, 1, 0.999858, 0.72499, -1, 1.02486, 0.75, 0.799922, 0.75, 0.25, -1, 0.999858, 0.25, 0.799922, 0.75, 0.375, -1, 0.999858, 0.72499, -0.800117, 0.75, 0.25, -0.800117, 0.75, 0.375)
+
+[node name="shelves_gltf" instance=ExtResource("1_rdh6l")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="shelves" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shelves/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_iewoe")

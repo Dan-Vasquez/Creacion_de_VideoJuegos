@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bseber3b5tggu"
+path="res://.godot/imported/mageHeadC.obj-41775045393925749752cef62448b7cb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mageHeadC.obj-41775045393925749752cef62448b7cb.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0/Characters/obj/extra heads/mageHeadC.obj"
+dest_files=["res://.godot/imported/mageHeadC.obj-41775045393925749752cef62448b7cb.mesh", "res://.godot/imported/mageHeadC.obj-41775045393925749752cef62448b7cb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

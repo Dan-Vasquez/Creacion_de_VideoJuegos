@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2q1yykbmcpjx"]
+
+[ext_resource type="PackedScene" uid="uid://cwi28ab7gmxy7" path="res://Assets/KayKit Dungeon Pack 1.0/gltf/chest_uncommon.gltf.glb" id="1_m0b31"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_volqb"]
+points = PackedVector3Array(-0.92, 0.499982, -0.55, -0.848136, 0, -0.495086, -0.92, 0.499982, 0.55, -0.92, 0.600661, -0.55, 0.92, 0.499982, -0.55, -0.848136, 0, 0.494978, 0.847956, 0, -0.495086, -0.92, 0.600661, 0.55, 0.92, 0.499982, 0.55, -0.606429, 0.724328, -0.0678348, -0.606429, 0.719493, -0.152144, -0.414252, 0.779503, -0.0678348, -0.233962, 0.809865, -0.223101, -0.195419, 0.764283, -0.310102, 0.92, 0.600661, -0.55, 0.847956, 0, 0.494978, -0.16426, 0.773954, 0.17637, -0.356617, 0.747239, 0.17637, 0.92, 0.600661, 0.55, 0.143007, 0.773716, 0.260572, 0.143007, 0.802176, 0.17637, 0.306547, 0.779424, -0.177339, 0.306547, 0.756197, -0.261541, 0.482334, 0.74708, 0.195644, 0.335364, 0.776966, 0.17637)
+
+[node name="chest_uncommon_gltf" instance=ExtResource("1_m0b31")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="chest_uncommon" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="chest_uncommon/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_volqb")

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd703ffd4ylsc"]
+
+[ext_resource type="PackedScene" uid="uid://4cbk2x0kx3i1" path="res://Assets/KayKit Dungeon Pack 1.0 RE/gltf/floor_wood_small.gltf.glb" id="1_pfgwg"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xqcew"]
+points = PackedVector3Array(-1, -0.1, -1, -1, -0.1, 1, -1, 0.0249951, -1, 1, -0.1, -1, -1, 0.0249951, 1, 1, -0.1, 1, -1, 0.05, -0.475137, -0.975137, 0.05, -0.975137, 1, 0.0249951, -1, -1, 0.05, 0.974941, 1, 0.0249951, 1, 0.974941, 0.05, -0.975137, 1, 0.05, -0.475137, 1, 0.05, 0.974941)
+
+[node name="floor_wood_small_gltf" instance=ExtResource("1_pfgwg")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor_wood_small" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor_wood_small/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_xqcew")

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cohmo81aw65pe"
+path="res://.godot/imported/bookcase.obj-db8c0a4d7878f830ed4c2c378d6710ab.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bookcase.obj-db8c0a4d7878f830ed4c2c378d6710ab.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0/obj/bookcase.obj"
+dest_files=["res://.godot/imported/bookcase.obj-db8c0a4d7878f830ed4c2c378d6710ab.mesh", "res://.godot/imported/bookcase.obj-db8c0a4d7878f830ed4c2c378d6710ab.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,223 @@
+[gd_scene load_steps=15 format=3 uid="uid://d3i0iqkpqullo"]
+
+[sub_resource type="GDScript" id="GDScript_krclo"]
+script/source = "extends Node3D
+
+var abierto = 0
+
+func _process(_delta):
+	
+	if abierto == 2:
+		$Area3D.collision_layer = 2
+		$CPUParticles3D.emitting = false
+		
+func _on_area_3d_body_entered(body):
+
+	if body in get_tree().get_nodes_in_group(\"Jugador\"):
+		abierto += 1
+		$AnimationPlayer.play(\"BotonAbajo\")
+
+func _on_area_3d_body_exited(body):
+
+	if body in get_tree().get_nodes_in_group(\"Jugador\"):
+		abierto -= 1
+		$AnimationPlayer.play(\"BotonArriba\")
+
+func _on_area_3d_body_entered2(body):
+	if body in get_tree().get_nodes_in_group(\"Jugador\"):
+		abierto += 1
+		$AnimationPlayer2.play(\"BotonAbajo2\")
+
+func _on_area_3d_body_exited2(body):
+	if body in get_tree().get_nodes_in_group(\"Jugador\"):
+		abierto -= 1
+		$AnimationPlayer2.play(\"BotonArriba2\")
+"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b24l2"]
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 0.337255, 0.113725, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qks55"]
+material = SubResource("StandardMaterial3D_b24l2")
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_y4cvg"]
+height = 0.6
+radius = 1.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_lugdk"]
+height = 1.0
+radius = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d8fcl"]
+albedo_color = Color(0.541176, 0.0196078, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_8g6xm"]
+material = SubResource("StandardMaterial3D_d8fcl")
+top_radius = 1.0
+bottom_radius = 1.0
+height = 0.5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bn5pm"]
+size = Vector3(20, 10, 0.1)
+
+[sub_resource type="Animation" id="Animation_60028"]
+resource_name = "BotonAbajo"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(6.136, 0, 3.33), Vector3(6.136, -0.3, 3.33)]
+}
+
+[sub_resource type="Animation" id="Animation_hn1m2"]
+resource_name = "BotonAbajo2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(16.427, 0, 3.677), Vector3(16.427, -0.3, 3.677)]
+}
+
+[sub_resource type="Animation" id="Animation_6c1qq"]
+resource_name = "BotonArriba"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(6.136, -0.3, 3.33), Vector3(6.136, 0, 3.33)]
+}
+
+[sub_resource type="Animation" id="Animation_kghc3"]
+resource_name = "BotonArriba2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(16.427, -0.3, 3.677), Vector3(16.427, 0, 3.677)]
+}
+
+[sub_resource type="Animation" id="Animation_bbk75"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(6.136, 0, 3.33)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaticBody3D2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(16.427, 0, 3.677)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rdp2u"]
+_data = {
+"BotonAbajo": SubResource("Animation_60028"),
+"BotonAbajo2": SubResource("Animation_hn1m2"),
+"BotonArriba": SubResource("Animation_6c1qq"),
+"BotonArriba2": SubResource("Animation_kghc3"),
+"RESET": SubResource("Animation_bbk75")
+}
+
+[node name="Barrera1" type="Node3D"]
+script = SubResource("GDScript_krclo")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.252, 0.85755, 11.075)
+amount = 50
+mesh = SubResource("BoxMesh_qks55")
+emission_shape = 3
+emission_box_extents = Vector3(1, 1.5, 0.5)
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_max = 1.0
+scale_amount_max = 3.0
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.427, 0, 3.677)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+shape = SubResource("CylinderShape3D_y4cvg")
+
+[node name="Area3D" type="Area3D" parent="StaticBody3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2/Area3D"]
+shape = SubResource("CylinderShape3D_lugdk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
+mesh = SubResource("CylinderMesh_8g6xm")
+skeleton = NodePath("../../StaticBody3D2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.136, 0, 3.33)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("CylinderShape3D_y4cvg")
+
+[node name="Area3D" type="Area3D" parent="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/Area3D"]
+shape = SubResource("CylinderShape3D_lugdk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("CylinderMesh_8g6xm")
+
+[node name="Area3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.252, 1.31361, 11.075)
+shape = SubResource("BoxShape3D_bn5pm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rdp2u")
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rdp2u")
+}
+
+[connection signal="body_entered" from="StaticBody3D2/Area3D" to="." method="_on_area_3d_body_entered2"]
+[connection signal="body_exited" from="StaticBody3D2/Area3D" to="." method="_on_area_3d_body_exited2"]
+[connection signal="body_entered" from="StaticBody3D/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="StaticBody3D/Area3D" to="." method="_on_area_3d_body_exited"]

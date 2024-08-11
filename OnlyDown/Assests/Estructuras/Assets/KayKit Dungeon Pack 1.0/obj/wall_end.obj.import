@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://se6pi7e3iyig"
+path="res://.godot/imported/wall_end.obj-1fbe6083a517634f0df9f3a2213ea3b7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall_end.obj-1fbe6083a517634f0df9f3a2213ea3b7.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0/obj/wall_end.obj"
+dest_files=["res://.godot/imported/wall_end.obj-1fbe6083a517634f0df9f3a2213ea3b7.mesh", "res://.godot/imported/wall_end.obj-1fbe6083a517634f0df9f3a2213ea3b7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

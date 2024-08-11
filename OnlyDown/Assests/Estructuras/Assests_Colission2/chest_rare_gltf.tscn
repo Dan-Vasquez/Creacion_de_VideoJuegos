@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh6bekk5gbng"]
+
+[ext_resource type="PackedScene" uid="uid://bygs4fiki27lq" path="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0/gltf/chest_rare.gltf.glb" id="1_08him"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yf0q4"]
+points = PackedVector3Array(0.90039, 0.391056, 0.525346, -0.885747, 0.389684, -0.534832, -0.855537, 0.6007, -0.516422, -0.881942, 0.444395, 0.542354, 0.836396, 0, -0.483043, -0.836396, -5.55112e-17, 0.492884, 0.855537, 0.6007, -0.516422, 0.855537, 0.6007, 0.526264, 0.836396, -5.55112e-17, 0.492884, -0.836396, -5.55112e-17, -0.483043, -0.855537, 0.6007, 0.526264, 0.885747, 0.389684, -0.534832, -0.90039, 0.391056, 0.525346, 0.881942, 0.444395, 0.542354)
+
+[node name="chest_rare_gltf" instance=ExtResource("1_08him")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="chest_rare" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="chest_rare/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_yf0q4")

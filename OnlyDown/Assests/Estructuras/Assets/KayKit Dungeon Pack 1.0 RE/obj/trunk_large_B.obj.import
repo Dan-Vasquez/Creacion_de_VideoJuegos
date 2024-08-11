@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://4aai3sw1yd32"
+path="res://.godot/imported/trunk_large_B.obj-77d7081e18d1438cc3cde10d0ed1fd45.mesh"
+
+[deps]
+
+files=["res://.godot/imported/trunk_large_B.obj-77d7081e18d1438cc3cde10d0ed1fd45.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0 RE/obj/trunk_large_B.obj"
+dest_files=["res://.godot/imported/trunk_large_B.obj-77d7081e18d1438cc3cde10d0ed1fd45.mesh", "res://.godot/imported/trunk_large_B.obj-77d7081e18d1438cc3cde10d0ed1fd45.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

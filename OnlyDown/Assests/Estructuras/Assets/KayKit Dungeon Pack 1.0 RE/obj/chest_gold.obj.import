@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://croukgm2mygbf"
+path="res://.godot/imported/chest_gold.obj-e7315da7744e7e5766b4f5e6353e0c75.mesh"
+
+[deps]
+
+files=["res://.godot/imported/chest_gold.obj-e7315da7744e7e5766b4f5e6353e0c75.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0 RE/obj/chest_gold.obj"
+dest_files=["res://.godot/imported/chest_gold.obj-e7315da7744e7e5766b4f5e6353e0c75.mesh", "res://.godot/imported/chest_gold.obj-e7315da7744e7e5766b4f5e6353e0c75.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

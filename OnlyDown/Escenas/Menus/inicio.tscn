@@ -1,0 +1,93 @@
+[gd_scene load_steps=11 format=3 uid="uid://do5th4oe1165b"]
+
+[ext_resource type="Texture2D" uid="uid://j2y8a5tmjgo7" path="res://Assests/Menus/Fondo_Inicio.png" id="1_h7wqq"]
+[ext_resource type="PackedScene" uid="uid://d0ihnhd0a4go2" path="res://Escenas/Menus/menu_principal.tscn" id="2_g047a"]
+[ext_resource type="PackedScene" uid="uid://0cf3m3h2m6ij" path="res://Assests/Menus/Logo.glb" id="3_hgtu2"]
+[ext_resource type="AudioStream" uid="uid://chasccx8lttu2" path="res://Assests/Sonido/Whispers in the Tower.mp3" id="4_yl2xv"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_pfbmh"]
+panorama = ExtResource("1_h7wqq")
+
+[sub_resource type="Sky" id="Sky_g381w"]
+sky_material = SubResource("PanoramaSkyMaterial_pfbmh")
+
+[sub_resource type="Environment" id="Environment_2x56q"]
+background_mode = 2
+sky = SubResource("Sky_g381w")
+tonemap_mode = 2
+glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(0.113725, 0.12549, 0.14902, 1)
+fog_light_energy = 1.75
+fog_sun_scatter = 0.55
+fog_sky_affect = 0.396
+
+[sub_resource type="Animation" id="Animation_xx4dl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Logo:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_epo4u"]
+resource_name = "Rotacion"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Logo:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.1, 0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 6.28319, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_53uey"]
+_data = {
+"RESET": SubResource("Animation_xx4dl"),
+"Rotacion": SubResource("Animation_epo4u")
+}
+
+[node name="Inicio" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, -0.000504911, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_2x56q")
+
+[node name="Pantalla_principal" parent="." instance=ExtResource("2_g047a")]
+
+[node name="Logo" parent="." instance=ExtResource("3_hgtu2")]
+transform = Transform3D(-1, 0, 2.53518e-06, 0, 1, 0, -2.53518e-06, 0, -1, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0880719)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_53uey")
+}
+autoplay = "Rotacion"
+speed_scale = 0.2
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(0.995166, 0, -0.0982082, 0, 1, 0, 0.0982082, 0, 0.995166, -0.140541, 0, 0.219302)
+light_color = Color(0.486275, 0, 0.443137, 1)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_yl2xv")
+autoplay = true

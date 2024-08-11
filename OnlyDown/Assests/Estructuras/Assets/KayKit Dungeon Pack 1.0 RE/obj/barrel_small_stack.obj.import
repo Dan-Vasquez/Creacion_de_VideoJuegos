@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cg4hi60lbqa0b"
+path="res://.godot/imported/barrel_small_stack.obj-67b820693808af8159a70c5c9eeffd5e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/barrel_small_stack.obj-67b820693808af8159a70c5c9eeffd5e.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0 RE/obj/barrel_small_stack.obj"
+dest_files=["res://.godot/imported/barrel_small_stack.obj-67b820693808af8159a70c5c9eeffd5e.mesh", "res://.godot/imported/barrel_small_stack.obj-67b820693808af8159a70c5c9eeffd5e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

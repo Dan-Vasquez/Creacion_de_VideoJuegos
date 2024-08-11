@@ -1,0 +1,152 @@
+[gd_scene load_steps=15 format=3 uid="uid://pntk3bdjtswk"]
+
+[ext_resource type="Script" path="res://Scripts/Jugador.gd" id="1_sc82j"]
+[ext_resource type="PackedScene" uid="uid://digm42o2p4yav" path="res://Escenas/Modelos3D/borracho_1.tscn" id="2_i4v7g"]
+[ext_resource type="PackedScene" uid="uid://djvlyhtboycq" path="res://Escenas/Menus/menu_secundario.tscn" id="2_xfq3u"]
+[ext_resource type="PackedScene" uid="uid://b6oqeqpsv4xb2" path="res://Escenas/Modelos3D/borracho_2.tscn" id="3_lusom"]
+[ext_resource type="AudioStream" uid="uid://b68e5bq5epngc" path="res://Assests/Sonido/Jump 7-Jump 7.wav" id="5_12lj2"]
+
+[sub_resource type="Animation" id="Animation_ys5cg"]
+resource_name = "Caminar"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivote/Personajes:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.0523599, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_oiaas"]
+resource_name = "Correr"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivote/Personajes:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.174533, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6hj0d"]
+resource_name = "Parado"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivote/Personajes:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.0872665), Vector3(0, 0, 0), Vector3(0, 0, -0.0872665)]
+}
+
+[sub_resource type="Animation" id="Animation_33kst"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivote/Personajes:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kaxfv"]
+_data = {
+"Caminar": SubResource("Animation_ys5cg"),
+"Correr": SubResource("Animation_oiaas"),
+"Parado": SubResource("Animation_6hj0d"),
+"RESET": SubResource("Animation_33kst")
+}
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_hkkh8"]
+height = 6.0
+radius = 1.8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ok5c7"]
+transparency = 1
+albedo_color = Color(0.466667, 0.466667, 0.466667, 0.545098)
+
+[sub_resource type="SphereMesh" id="SphereMesh_iqk8o"]
+material = SubResource("StandardMaterial3D_ok5c7")
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_vuyyu"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+
+[node name="Jugador" type="CharacterBody3D" groups=["Jugador", "Player"]]
+script = ExtResource("1_sc82j")
+
+[node name="Menu" parent="." instance=ExtResource("2_xfq3u")]
+
+[node name="Animaciones" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kaxfv")
+}
+autoplay = "Parado"
+speed_scale = 2.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+shape = SubResource("CylinderShape3D_hkkh8")
+
+[node name="Polvo" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.400599)
+amount = 20
+lifetime = 0.3
+mesh = SubResource("SphereMesh_iqk8o")
+emission_shape = 3
+emission_box_extents = Vector3(1, 0.5, 1)
+gravity = Vector3(0, 9.8, 0)
+scale_amount_min = 0.5
+
+[node name="Pivote" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Personajes" type="Node3D" parent="Pivote"]
+
+[node name="Borracho1" parent="Pivote/Personajes" instance=ExtResource("2_i4v7g")]
+
+[node name="Borracho2" parent="Pivote/Personajes" instance=ExtResource("3_lusom")]
+visible = false
+
+[node name="Cabeza" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.38822, 0)
+
+[node name="Camara" type="Camera3D" parent="Cabeza"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 4.28834, 3.13177, 7.37033)
+far = 200.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+omni_range = 10.0
+
+[node name="Jump" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_12lj2")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_vuyyu")

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bf8xr1qt3lqif"
+path="res://.godot/imported/wallSingle_decorationA.obj-7a510f6c487c14315d240eaec5a6ecaf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wallSingle_decorationA.obj-7a510f6c487c14315d240eaec5a6ecaf.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0/obj/wallSingle_decorationA.obj"
+dest_files=["res://.godot/imported/wallSingle_decorationA.obj-7a510f6c487c14315d240eaec5a6ecaf.mesh", "res://.godot/imported/wallSingle_decorationA.obj-7a510f6c487c14315d240eaec5a6ecaf.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

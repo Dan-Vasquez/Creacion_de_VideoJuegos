@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://7p0flfpxvxob"]
+
+[ext_resource type="Texture2D" uid="uid://ddj7ojty4r7qu" path="res://Assests/Modelos3D/Borracho1/Camisa.jpg" id="1_nrifu"]
+
+[resource]
+albedo_texture = ExtResource("1_nrifu")

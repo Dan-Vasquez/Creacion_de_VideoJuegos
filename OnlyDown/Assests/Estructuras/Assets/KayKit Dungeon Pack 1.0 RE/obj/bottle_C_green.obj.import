@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bsfhdjtcj724p"
+path="res://.godot/imported/bottle_C_green.obj-b8a1c20763f7f41d5ab7f6728be16144.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bottle_C_green.obj-b8a1c20763f7f41d5ab7f6728be16144.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0 RE/obj/bottle_C_green.obj"
+dest_files=["res://.godot/imported/bottle_C_green.obj-b8a1c20763f7f41d5ab7f6728be16144.mesh", "res://.godot/imported/bottle_C_green.obj-b8a1c20763f7f41d5ab7f6728be16144.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

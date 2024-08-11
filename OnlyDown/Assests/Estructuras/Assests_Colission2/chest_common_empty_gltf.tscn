@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhqnkdus5ks1u"]
+
+[ext_resource type="PackedScene" uid="uid://icy4d0tobjp2" path="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0/gltf/chest_common_empty.gltf.glb" id="1_13t3s"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8exwg"]
+points = PackedVector3Array(0.454351, 0.8789, 0.00936426, -0.70343, 0.489992, -0.539992, -0.708255, 0.600976, -0.543687, -0.70963, 0.601255, 0.541882, 0.639689, 0.00499374, 0.495, 0.636007, 0.00759629, -0.495, -0.639689, 0.00490522, 0.495, 0.708532, 0.600944, -0.543898, 0.709907, 0.601223, 0.542094, -0.636007, 0.00750828, -0.495, 0.230542, 0.887006, -0.158627, 0.344948, 0.899109, 0.0524463, 0.366046, 0.876961, -0.205963, 0.706168, 0.49012, 0.539231, -0.706168, 0.49012, 0.539231, 0.70343, 0.489992, -0.539992, 0.542958, 0.815445, -0.0991552, 0.412215, 0.901885, -0.0772856, 0.274445, 0.88995, 0.0513298, 0.565606, 0.794342, -0.0339929, 0.476412, 0.857708, -0.142198, 0.182552, 0.873141, -0.112969, 0.520981, 0.837, -0.0122597, 0.366305, 0.898967, -0.163001, 0.388145, 0.899237, 0.0308436, 0.408887, 0.876618, -0.184327, 0.566024, 0.794591, -0.0775724, 0.520006, 0.83629, -0.098934, 0.456162, 0.880581, -0.0991599)
+
+[node name="chest_common_empty_gltf" instance=ExtResource("1_13t3s")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="chest_common_empty" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="chest_common_empty/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_8exwg")

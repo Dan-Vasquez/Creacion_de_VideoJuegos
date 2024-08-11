@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://br060aeh0x44x"]
+
+[ext_resource type="PackedScene" uid="uid://b0aqssvob2856" path="res://Assets/KayKit Dungeon Pack 1.0 RE/gltf/floor_tile_grate.gltf.glb" id="1_bkdir"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pcerl"]
+points = PackedVector3Array(-2, -0.100023, -1, -1.648, -0.98, -0.651135, -2, -0.100023, 1, -2, 0.0498992, -1, 2, -0.100023, -1, -1.648, -0.98, 0.65094, 1.64761, -0.98, -0.651135, -2, 0.0498992, 1, 2, -0.100023, 1, 2, 0.0498992, -1, 1.64761, -0.98, 0.65094, 2, 0.0498992, 1)
+
+[node name="floor_tile_grate_gltf" instance=ExtResource("1_bkdir")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor_tile_grate" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor_tile_grate/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_pcerl")

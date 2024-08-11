@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://bwnyjpgktbffg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3gr8c"]
+albedo_color = Color(0.27451, 0.286275, 0.290196, 1)
+metallic = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_x1lk2"]
+material = SubResource("StandardMaterial3D_3gr8c")
+top_radius = 0.0
+
+[sub_resource type="GDScript" id="GDScript_wbjci"]
+script/source = "extends MeshInstance3D
+
+func _on_area_3d_body_entered(body):
+	if body in get_tree().get_nodes_in_group(\"Player\"):
+		#body.queue_free()
+		#get_tree().reload_current_scene()
+		body.global_position = body.checkpoint 
+"
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_i6kj1"]
+points = PackedVector3Array(0.43648, -1.01587, 0.309424, -0.515873, -1.01587, 0.150784, 0.0237287, 1.01587, 0.0237287, 0.150784, -1.01587, -0.515873, -0.166496, -0.92061, 0.499956, 0.499956, -0.984052, -0.198285, -0.293449, -0.984052, -0.452191, -0.0395427, 0.984052, -0.0395427, 0.182471, -0.952232, 0.499956, -0.420504, -1.01587, 0.341214, 0.373003, -0.952232, -0.388715, 0.499956, -0.856969, 0.0872052, -0.483981, -0.952232, -0.229972, -0.0395427, 0.92061, 0.0555182, 0.0555182, 0.92061, -0.0395427, -0.134809, -0.952232, -0.515873, 0.0237287, -0.984052, 0.531746, -0.515873, -0.92061, -0.0712297, 0.373003, -0.730084, 0.309424, -0.357028, -0.952232, 0.40469, -0.452191, -1.01587, -0.293449, 0.0872052, -0.92061, -0.515873, 0.214261, -0.92061, -0.483981, 0.0555182, 0.888789, 0.0555182, -0.420504, -0.92061, -0.325238, -0.452191, -0.92061, 0.277737, -0.483981, -0.793527, 0.0872052, 0.309424, -0.952232, 0.43648, 0.499956, -0.952232, 0.182471, 0.499956, -0.856969, -0.0712297, 0.499956, -1.01587, -0.198285, -0.198285, -1.01587, 0.499956)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3qqft"]
+size = Vector3(0.356, 0.688945, 0.275)
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+lod_bias = 0.1
+mesh = SubResource("CylinderMesh_x1lk2")
+script = SubResource("GDScript_wbjci")
+
+[node name="Pinch" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Pinch"]
+visible = false
+shape = SubResource("ConvexPolygonShape3D_i6kj1")
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Area3D"]
+transform = Transform3D(3.02, 0, 0, 0, 3.02, 0, 0, 0, 3.02, 0.023133, -0.00906146, 0)
+shape = SubResource("BoxShape3D_3qqft")
+
+[connection signal="body_entered" from="MeshInstance3D/Area3D" to="MeshInstance3D" method="_on_area_3d_body_entered"]

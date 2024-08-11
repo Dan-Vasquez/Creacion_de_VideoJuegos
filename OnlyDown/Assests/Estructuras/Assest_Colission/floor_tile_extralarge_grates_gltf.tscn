@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcgwj86e5hog8"]
+
+[ext_resource type="PackedScene" uid="uid://by025s30d8aey" path="res://Assets/KayKit Dungeon Pack 1.0 RE/gltf/floor_tile_extralarge_grates.gltf.glb" id="1_ipxpw"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2dne0"]
+points = PackedVector3Array(-4, -0.100091, -4, -1.64839, -0.98, -3.65153, -3.65153, -0.98, -1.64839, -4, -0.100091, 4, -4, 0.0498973, -4, 4, -0.100091, -4, 1.64761, -0.98, -3.65153, -3.65153, -0.98, 1.64761, -4, 0.0498973, 4, -1.64839, -0.98, 3.65074, 4, -0.100091, 4, -0.924824, 0.15, -0.324197, -0.324197, 0.15, -0.924824, 4, 0.0498973, -4, 3.65074, -0.98, -1.64839, -0.324197, 0.15, 0.924041, -0.924824, 0.15, 0.323414, 4, 0.0498973, 4, 1.64761, -0.98, 3.65074, 3.65074, -0.98, 1.64761, 0.323414, 0.15, -0.924824, 0.924041, 0.15, -0.324197, 0.323414, 0.15, 0.924041, 0.924041, 0.15, 0.323414)
+
+[node name="floor_tile_extralarge_grates_gltf" instance=ExtResource("1_ipxpw")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor_tile_extralarge_grates" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor_tile_extralarge_grates/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_2dne0")

@@ -1,0 +1,137 @@
+[gd_scene load_steps=13 format=3 uid="uid://ckxqjey61lyj5"]
+
+[sub_resource type="GDScript" id="GDScript_a3vpj"]
+script/source = "extends Node3D
+
+var abierto = -1
+
+func _process(_delta):
+	
+	if abierto == 1:
+		#queue_free()
+		$Area3D.collision_layer = 2
+		$Area3D/CPUParticles3D.emitting = false
+	else:
+		$Area3D.collision_layer = 1
+		$Area3D/CPUParticles3D.emitting = true		
+		
+func _on_area_3d_body_entered(body):
+	if body in get_tree().get_nodes_in_group(\"Jugador\"):
+		$AnimationPlayer.play(\"Abajo\")
+		abierto = 1
+
+func _on_area_3d_body_exited(body):
+	pass
+"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_132t1"]
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 0.337255, 0.113725, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_m1v6m"]
+material = SubResource("StandardMaterial3D_132t1")
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pnubr"]
+size = Vector3(20, 10, 0.1)
+
+[sub_resource type="Animation" id="Animation_nech6"]
+resource_name = "Abajo"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-10.885, -4.73712, 4.322), Vector3(-10.885, -5.037, 4.322)]
+}
+
+[sub_resource type="Animation" id="Animation_un0ml"]
+resource_name = "MoverPalanca"
+
+[sub_resource type="Animation" id="Animation_142mh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-10.885, -4.737, 4.322)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2mei0"]
+_data = {
+"Abajo": SubResource("Animation_nech6"),
+"MoverPalanca": SubResource("Animation_un0ml"),
+"RESET": SubResource("Animation_142mh")
+}
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_shjld"]
+height = 0.6
+radius = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_86huy"]
+albedo_color = Color(0.541176, 0.0196078, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hp7xu"]
+material = SubResource("StandardMaterial3D_86huy")
+top_radius = 1.0
+bottom_radius = 1.0
+height = 0.5
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_dib27"]
+height = 1.0
+radius = 1.0
+
+[node name="Barrera0" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.84232, 6.02439, -14.9764)
+script = SubResource("GDScript_a3vpj")
+
+[node name="Area3D" type="StaticBody3D" parent="."]
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="Area3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+amount = 500
+mesh = SubResource("BoxMesh_m1v6m")
+emission_shape = 3
+emission_box_extents = Vector3(9, 5, 0.5)
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_max = 1.0
+scale_amount_max = 3.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.207212, 0, 0)
+shape = SubResource("BoxShape3D_pnubr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2mei0")
+}
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.885, -4.737, 4.322)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+shape = SubResource("CylinderShape3D_shjld")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
+mesh = SubResource("CylinderMesh_hp7xu")
+skeleton = NodePath("../../StaticBody3D2")
+
+[node name="Area3D" type="Area3D" parent="StaticBody3D2"]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D2/Area3D"]
+shape = SubResource("CylinderShape3D_dib27")
+
+[connection signal="body_entered" from="StaticBody3D2/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="StaticBody3D2/Area3D" to="." method="_on_area_3d_body_exited"]

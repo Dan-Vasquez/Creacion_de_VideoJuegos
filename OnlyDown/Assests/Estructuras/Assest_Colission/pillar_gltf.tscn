@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvk1py4cvy3lx"]
+
+[ext_resource type="PackedScene" uid="uid://l8ehyireypnr" path="res://Assets/KayKit Dungeon Pack 1.0 RE/gltf/pillar.gltf.glb" id="1_7k4dt"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_aqrbo"]
+points = PackedVector3Array(-0.750012, 0, -0.276331, -0.276343, 0, -0.75, -0.750012, 0, 0.276184, -0.750012, 3.99961, -0.276331, 0.276172, 0, -0.75, -0.276343, 4, -0.75, -0.276343, 0, 0.75, -0.750012, 3.99961, 0.276184, 0.749988, 0, -0.276331, 0.276172, 4, -0.75, -0.276343, 4, 0.75, 0.276172, 0, 0.75, 0.749988, 0, 0.276184, 0.749988, 3.99961, -0.276331, 0.276172, 4, 0.75, 0.749988, 3.99961, 0.276184)
+
+[node name="pillar_gltf" instance=ExtResource("1_7k4dt")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="pillar" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pillar/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_aqrbo")

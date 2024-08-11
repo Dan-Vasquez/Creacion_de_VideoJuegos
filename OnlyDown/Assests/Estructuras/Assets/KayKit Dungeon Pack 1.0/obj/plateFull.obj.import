@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://jp7dmnabcd86"
+path="res://.godot/imported/plateFull.obj-834f7711a41393ac3a66c02562cbb4ce.mesh"
+
+[deps]
+
+files=["res://.godot/imported/plateFull.obj-834f7711a41393ac3a66c02562cbb4ce.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0/obj/plateFull.obj"
+dest_files=["res://.godot/imported/plateFull.obj-834f7711a41393ac3a66c02562cbb4ce.mesh", "res://.godot/imported/plateFull.obj-834f7711a41393ac3a66c02562cbb4ce.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

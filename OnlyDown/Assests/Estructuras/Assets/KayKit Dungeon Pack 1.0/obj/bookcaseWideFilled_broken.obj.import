@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cbit5rrkteows"
+path="res://.godot/imported/bookcaseWideFilled_broken.obj-a92e911b4e35c8a10a1412a7c0dd8851.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bookcaseWideFilled_broken.obj-a92e911b4e35c8a10a1412a7c0dd8851.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0/obj/bookcaseWideFilled_broken.obj"
+dest_files=["res://.godot/imported/bookcaseWideFilled_broken.obj-a92e911b4e35c8a10a1412a7c0dd8851.mesh", "res://.godot/imported/bookcaseWideFilled_broken.obj-a92e911b4e35c8a10a1412a7c0dd8851.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

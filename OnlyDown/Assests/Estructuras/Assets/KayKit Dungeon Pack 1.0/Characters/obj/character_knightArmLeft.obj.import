@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cpnp63sgl4eal"
+path="res://.godot/imported/character_knightArmLeft.obj-3ea899a7a9948bd4dc38e6f91c4ad78b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/character_knightArmLeft.obj-3ea899a7a9948bd4dc38e6f91c4ad78b.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0/Characters/obj/character_knightArmLeft.obj"
+dest_files=["res://.godot/imported/character_knightArmLeft.obj-3ea899a7a9948bd4dc38e6f91c4ad78b.mesh", "res://.godot/imported/character_knightArmLeft.obj-3ea899a7a9948bd4dc38e6f91c4ad78b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

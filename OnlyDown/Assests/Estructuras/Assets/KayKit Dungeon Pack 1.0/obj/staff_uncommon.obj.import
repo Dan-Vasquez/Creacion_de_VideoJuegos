@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ww3q0d2dq40y"
+path="res://.godot/imported/staff_uncommon.obj-f9df5c8cc23d6ecc10278df959b6f74f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/staff_uncommon.obj-f9df5c8cc23d6ecc10278df959b6f74f.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0/obj/staff_uncommon.obj"
+dest_files=["res://.godot/imported/staff_uncommon.obj-f9df5c8cc23d6ecc10278df959b6f74f.mesh", "res://.godot/imported/staff_uncommon.obj-f9df5c8cc23d6ecc10278df959b6f74f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

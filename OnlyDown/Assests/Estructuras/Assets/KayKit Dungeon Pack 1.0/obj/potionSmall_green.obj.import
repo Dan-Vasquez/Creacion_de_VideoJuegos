@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://duf44i0otdldh"
+path="res://.godot/imported/potionSmall_green.obj-aebd24c3deb206a5179f8b939a9b16cb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/potionSmall_green.obj-aebd24c3deb206a5179f8b939a9b16cb.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0/obj/potionSmall_green.obj"
+dest_files=["res://.godot/imported/potionSmall_green.obj-aebd24c3deb206a5179f8b939a9b16cb.mesh", "res://.godot/imported/potionSmall_green.obj-aebd24c3deb206a5179f8b939a9b16cb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

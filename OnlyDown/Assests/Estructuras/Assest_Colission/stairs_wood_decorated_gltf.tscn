@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ca7uh30ik2kjy"]
+
+[ext_resource type="PackedScene" uid="uid://b5m37ewnp7lx6" path="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0 RE/gltf/stairs_wood_decorated.gltf.glb" id="1_fxe7a"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_413l6"]
+points = PackedVector3Array(-1.65, -1.49012e-07, 0.399961, -1.65, 3.53384, 0.399961, -1.50012, 3.49975, 0, 1.65, -1.49012e-07, 0.399961, -1.65, -1.49012e-07, 4.64977, -1.50012, 4.05, 0.919146, -1.50012, 4.05, 0, -1.65, 2.23392, 2.39977, 1.49979, 3.49975, 0, 1.65, 3.53384, 0.399961, 1.65, -1.49012e-07, 4.64977, -1.50012, -1.49012e-07, 5.80619, -1.50012, 0.249755, 6, -1.65, 0.767105, 4.64977, 1.49979, 4.05, 0.919146, -1.65, 0.933609, 4.39957, -1.50012, 0.499907, 6, 1.49979, 4.05, 0, 1.65, 2.23392, 2.39977, 1.65, 0.767105, 4.64977, 1.49979, 0.249755, 6, 1.49979, -1.49012e-07, 5.80619, 1.49979, 0.499907, 6, 1.65, 0.933609, 4.39957)
+
+[node name="stairs_wood_decorated_gltf" instance=ExtResource("1_fxe7a")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stairs_wood_decorated" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stairs_wood_decorated/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_413l6")

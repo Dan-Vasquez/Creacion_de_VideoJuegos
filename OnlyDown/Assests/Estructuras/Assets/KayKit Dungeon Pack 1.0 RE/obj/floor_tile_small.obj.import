@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://nusq50q7ncva"
+path="res://.godot/imported/floor_tile_small.obj-fbb6e90183c63edb61a2359c2e0f8b08.mesh"
+
+[deps]
+
+files=["res://.godot/imported/floor_tile_small.obj-fbb6e90183c63edb61a2359c2e0f8b08.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0 RE/obj/floor_tile_small.obj"
+dest_files=["res://.godot/imported/floor_tile_small.obj-fbb6e90183c63edb61a2359c2e0f8b08.mesh", "res://.godot/imported/floor_tile_small.obj-fbb6e90183c63edb61a2359c2e0f8b08.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

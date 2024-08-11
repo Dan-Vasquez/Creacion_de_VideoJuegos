@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dg6i6siatw48e"
+path="res://.godot/imported/pots.obj-1cb8a3372e07dba7196c20712ea7fadf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pots.obj-1cb8a3372e07dba7196c20712ea7fadf.mesh"]
+
+source_file="res://Assests/Estructuras/Assets/KayKit Dungeon Pack 1.0/obj/pots.obj"
+dest_files=["res://.godot/imported/pots.obj-1cb8a3372e07dba7196c20712ea7fadf.mesh", "res://.godot/imported/pots.obj-1cb8a3372e07dba7196c20712ea7fadf.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

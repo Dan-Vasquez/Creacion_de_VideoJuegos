@@ -1,0 +1,68 @@
+[gd_scene load_steps=17 format=3 uid="uid://bqt826q27crmw"]
+
+[ext_resource type="PackedScene" uid="uid://c5e5j26ivr4s7" path="res://Assests/Estructuras/Assests_Colission2/artifact_gltf.tscn" id="1_17qq1"]
+[ext_resource type="PackedScene" uid="uid://cqyq2ay371syl" path="res://Assests/Estructuras/Assests_Colission2/axe_double_rare_gltf.tscn" id="2_j265g"]
+[ext_resource type="PackedScene" uid="uid://gkikemvtgk4c" path="res://Assests/Estructuras/Assests_Colission2/axe_double_uncommon_gltf.tscn" id="3_mb8tv"]
+[ext_resource type="PackedScene" uid="uid://dv00e5rawhw4g" path="res://Assests/Estructuras/Assests_Colission2/bookcase_broken_gltf.tscn" id="4_s6h4i"]
+[ext_resource type="PackedScene" uid="uid://j21gmkdfrdw8" path="res://Assests/Estructuras/Assests_Colission2/bucket_gltf.tscn" id="5_ooafs"]
+[ext_resource type="PackedScene" uid="uid://dhqnkdus5ks1u" path="res://Assests/Estructuras/Assests_Colission2/chest_common_empty_gltf.tscn" id="6_fd2ty"]
+[ext_resource type="PackedScene" uid="uid://bh6bekk5gbng" path="res://Assests/Estructuras/Assests_Colission2/chest_rare_gltf.tscn" id="7_6ye0s"]
+[ext_resource type="PackedScene" uid="uid://dho7no2xn3qfo" path="res://Assests/Estructuras/Assests_Colission2/door_gltf.tscn" id="8_86s51"]
+[ext_resource type="PackedScene" uid="uid://br0sq3hl8vtub" path="res://Assests/Estructuras/Assests_Colission2/loot_sack_b_gltf.tscn" id="9_t3a86"]
+[ext_resource type="PackedScene" uid="uid://buoj7nmqyht7f" path="res://Assests/Estructuras/Assests_Colission2/potion_large_green_gltf.tscn" id="10_ffbib"]
+[ext_resource type="PackedScene" uid="uid://dj4ictxijba2u" path="res://Assests/Estructuras/Assests_Colission2/pot_a_decorated_gltf.tscn" id="11_5o0vv"]
+[ext_resource type="PackedScene" uid="uid://b13peqotnvwuv" path="res://Assests/Estructuras/Assests_Colission2/pot_c_decorated_gltf.tscn" id="12_e1dx2"]
+[ext_resource type="PackedScene" uid="uid://bragf0oclnlnx" path="res://Assests/Estructuras/Assests_Colission2/staff_rare_gltf.tscn" id="13_y6hbw"]
+[ext_resource type="PackedScene" uid="uid://d8kpjy4elxkr" path="res://Assests/Estructuras/Assests_Colission2/staff_uncommon_gltf.tscn" id="14_c6h6e"]
+[ext_resource type="PackedScene" uid="uid://dmgw03y2s3bgn" path="res://Assests/Estructuras/Assests_Colission2/torch_wall_gltf.tscn" id="15_wo2p8"]
+[ext_resource type="ArrayOccluder3D" uid="uid://duyc4i18u1jfn" path="res://Escenas/Estructuras/Creator_MeshCOL2.occ" id="16_jjj7b"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="artifact_gltf" parent="." instance=ExtResource("1_17qq1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.173018, 0, 1.1897)
+
+[node name="axeDouble_rare_gltf" parent="." instance=ExtResource("2_j265g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.173018, 0, 1.1897)
+
+[node name="axeDouble_uncommon_gltf" parent="." instance=ExtResource("3_mb8tv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.173018, 0, 1.1897)
+
+[node name="bookcase_broken_gltf" parent="." instance=ExtResource("4_s6h4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.173018, 0, 1.1897)
+
+[node name="bucket_gltf" parent="." instance=ExtResource("5_ooafs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.173018, 0, 1.1897)
+
+[node name="chest_common_empty_gltf" parent="." instance=ExtResource("6_fd2ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.173018, 0, 1.1897)
+
+[node name="chest_rare_gltf" parent="." instance=ExtResource("7_6ye0s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.173018, 0, 1.1897)
+
+[node name="door_gltf" parent="." instance=ExtResource("8_86s51")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.173018, 0, 1.1897)
+
+[node name="lootSackB_gltf" parent="." instance=ExtResource("9_t3a86")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.173018, 0, 1.1897)
+
+[node name="potionLarge_green_gltf" parent="." instance=ExtResource("10_ffbib")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.173018, 0, 1.1897)
+
+[node name="potA_decorated_gltf" parent="." instance=ExtResource("11_5o0vv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.173018, 0, 1.1897)
+
+[node name="potC_decorated_gltf" parent="." instance=ExtResource("12_e1dx2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.173018, 0, 1.1897)
+
+[node name="staff_rare_gltf" parent="." instance=ExtResource("13_y6hbw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.173018, 0, 1.1897)
+
+[node name="staff_uncommon_gltf" parent="." instance=ExtResource("14_c6h6e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.173018, 0, 1.1897)
+
+[node name="torchWall_gltf" parent="." instance=ExtResource("15_wo2p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.173018, 0, 1.1897)
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+occluder = ExtResource("16_jjj7b")
